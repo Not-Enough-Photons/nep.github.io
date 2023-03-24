@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "proximaNova";
+    src: url("fontsfree-net-proxima-nova-bold-webfont.woff2");
+}
+
+body {
+    background-color: black;
+}
+
+.video-bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+
+    width: 200%;
+    height: 200%;
+
+    z-index: -100; 
+}
+
+.video-bg > video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%;
+    opacity: 50%;
+    filter: blur(6px) contrast(1.75) brightness(1.25);
+}
+
+.nep-body-main {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.nep-title {
+    font-size: 50px;
+    font-family: proximaNova;
+    text-align: center;
+
+    margin-bottom: -15px;
+
+    color: white;
+    
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(250, 250, 250), 0 0 0.2em rgb(255, 0, 0);
+}
+  
+.nep-subtitle {
+    font-size: 30px;
+    font-family: proximaNova;
+    text-align: center;
+
+    color: white;
+}
+  
+.nep-redir-list {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    
+    gap: 50px;
+}
+  
+.nep-redir-list > a {
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    font-family: proximaNova;
+
+    color: white;
+
+    text-decoration: none;
+}
+
+.nep-redir-list > a:hover {
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(250, 250, 250), 0 0 0.2em rgb(255, 0, 0);
+    cursor: pointer;
+
+    animation-name: option-hover;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+}
+
+@keyframes option-hover {
+    from 
+    {
+        text-shadow: 0px 0px 0px rgb(255, 255, 255), 0 0 0em rgb(250, 250, 250), 0 0 0.0em rgb(255, 0, 0);
+    }
+    to 
+    {
+        text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(250, 250, 250), 0 0 0.2em rgb(255, 0, 0);
+    }
+}

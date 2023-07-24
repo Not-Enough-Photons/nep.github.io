@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #444444, #000000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-page {
+    text-align: center;
+    color: #ffffff;
+}
+
+.logo img {
+    width: 200px; /* Adjust the size as needed */
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover effect for buttons (Optional) */
+.button:hover {
+    background-color: #f0f0f0;
+}

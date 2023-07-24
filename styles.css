@@ -36,7 +36,7 @@ svg {
     margin-bottom: 20px; /* Add some space between company name and buttons */
     font-family: "proximaNova";
     text-shadow: 2px 2px 10px black;
-    color: red;
+    color: rgb(212, 25, 25);
 }
 
 .company-name-white {

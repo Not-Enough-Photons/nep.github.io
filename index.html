@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Company Landing Page</title>
+    <title>Not Enough Photons</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<div class="tv-static">
+		<svg>
+			<filter id="noise">
+				<feTurbulence id="turbulence">
+					<animate attributeName="baseFrequency" dur ="1s" values="0.9 0.9;0.8 0.8;0.9 0.9;" repeatCount="indefinite"></animate>"
+				</feTurbulence>
+				<feDisplacementMap in="SourceGraphic" scale="60"></feDisplacementMap>
+			</filter>
+        </svg>
+	</div>
+	
     <div class="landing-page">
-        <div class="logo">
-            <img src="img/logo.png" alt="Your Company Logo">
-        </div>
+        <div class="company-name">
+			<span class="company-name-red">NOT </span>
+			<span class="company-name-white">ENOUGH PHOTONS</span>
+			<span class="company-name-red">.</span>
+		</div>
         <div class="buttons">
             <a href="#" class="button">About</a>
             <a href="#" class="button">Projects</a>
             <a href="#" class="button">Other</a>
         </div>
     </div>
+
 </body>
 </html>

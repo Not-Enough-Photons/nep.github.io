@@ -58,6 +58,7 @@ svg {
 .buttons {
     display: flex; /* Use flexbox to horizontally align the buttons */
     justify-content: center; /* Center the buttons horizontally */
+    /* whitespace */
 }
 
 .button {

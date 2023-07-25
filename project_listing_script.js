@@ -1,4 +1,4 @@
-const elements = document.querySelectorAll('#project-parent p#project-button');
+const elements = document.querySelectorAll('#project-parent p#project-button span#project-name');
 const projectVideos = {
     "Hitmarkers": "img/project_hitmarkers.webm",
     "Scoreworks": "img/project_scoreworks.webm",

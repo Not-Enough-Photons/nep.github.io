@@ -56,6 +56,12 @@ body {
     height: 100%;
 }
 
+.release-footnote {
+    font-size: x-small;
+    position: relative;
+    bottom: 15px;
+}
+
 #video-background {
     position: absolute;
     top: 0;

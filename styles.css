@@ -30,6 +30,12 @@ svg {
     height: 0;
 }
 
+.company-name {
+    cursor:default;
+
+    user-select: none;
+}
+
 .landing-page {
     text-align: center;
     color: #ffffff;

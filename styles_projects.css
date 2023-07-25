@@ -59,7 +59,7 @@ body {
 .release-footnote {
     font-size: x-small;
     position: relative;
-    bottom: 15px;
+    bottom: 0px;
 }
 
 #video-background {

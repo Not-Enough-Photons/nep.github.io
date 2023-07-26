@@ -1,0 +1,23 @@
+{
+    "MonoDirector" : {
+        "projectBanner" : null,
+        "projectName" : "MonoDirector",
+        "projectRelease" : "2023 TBD",
+        "projectGame" : "BONELAB",
+        "projectPlatform" : "Valve Index"
+    },
+    "Paranoia" : {
+        "projectBanner" : null,
+        "projectName" : "Paranoia",
+        "projectRelease" : "2021",
+        "projectGame": "BONEWORKS",
+        "projectPlatform": "Valve Index"
+    },
+    "Scoreworks" : {
+        "projectBanner" : null,
+        "projectName": "Scoreworks",
+        "projectRelease": "2021/2022",
+        "projectGame": "BONEWORKS",
+        "projectPlatform": "Valve Index"
+    }
+}

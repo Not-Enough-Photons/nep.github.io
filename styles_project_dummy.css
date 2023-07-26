@@ -1,0 +1,50 @@
+:root {
+    --grid-spacing: 25px;
+}
+
+@font-face {
+    font-family: "proximaNova";
+    src: url("fontsfree-net-proxima-nova-bold-webfont.woff2");
+}
+
+body {
+    background-color: black;
+}
+
+.project-info-layout {
+    width: 750px;
+    height: 1000px;
+    margin: auto;
+    background-color: gray;
+
+    padding: 50px;
+
+    overflow: auto;
+}
+
+.project-info {
+    display: grid;
+    grid-template-rows: var(--grid-spacing) var(--grid-spacing) var(--grid-spacing);
+    text-align: left;
+}
+
+.project-info p {
+    font-family: "proximaNova";
+}
+
+.project-header {
+    height: 200px;
+    background-color: gainsboro;
+}
+
+.project-description {
+    width:fit-content;
+}
+
+.project-info-layout h1 {
+    font-family: "proximaNova";
+}
+
+.project-description p {
+    font-family: "proximaNova";
+}

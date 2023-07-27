@@ -1,5 +1,6 @@
 :root {
-    --grid-spacing: 25px;
+    --width-side-1: 650px;
+    --width-side-2: 350px;
 }
 
 @font-face {
@@ -11,49 +12,64 @@ body {
     background-color: black;
 }
 
-.project-info-layout {
-    width: 750px;
-    height: 1000px;
-    margin: auto;
-    background-color: white;
-    padding: 50px;
+.test {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    overflow: auto;
+.project-container {
+    position: relative;
+    background-color: black;
+
+    width: 100%;
+    height: 500px;
+}
+
+.project-banner {
+    position: relative;
+    background-image: url("img/paranoia_banner.jpg");
+    background-position: center;
+    background-repeat: space;
+}
+
+.project-container-2 {
+    background-color: gray;
+
+    width: 100%;
+    height: 500px;
 }
 
 .project-info {
-    display: grid;
-    grid-template-rows: var(--grid-spacing) var(--grid-spacing) var(--grid-spacing);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
     text-align: left;
+
+    top: 25%;
+    left: 0%;
+
+    padding-left: 10px;
 }
 
 .project-info p {
+    color: white;
+    font-size: 4.5em;
     font-family: "proximaNova";
 }
 
-.project-header {
-    height: 200px;
-    background-color: black;
-    overflow: hidden;
+.project-banner {
+    height: 100%;
+    width: 100%;
+}
+
+.project-banner img {
     object-fit: contain;
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.project-header img {
-    position: relative;
-}
-
-.project-description {
-    width:fit-content;
-}
-
-.project-info-layout h1 {
-    font-family: "proximaNova";
-}
-
-.project-description p {
-    font-family: "proximaNova";
+.info-item {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }

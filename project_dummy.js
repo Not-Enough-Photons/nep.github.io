@@ -20,7 +20,7 @@ function setProject(projectName) {
 }
 
 function onInfoRead(data) {
-    setProject("MonoDirector");
+    setProject("Paranoia");
 
     const stringData = JSON.stringify(data);
     const obj = JSON.parse(stringData);

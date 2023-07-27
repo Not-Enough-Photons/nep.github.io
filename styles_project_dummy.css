@@ -15,8 +15,7 @@ body {
     width: 750px;
     height: 1000px;
     margin: auto;
-    background-color: gray;
-
+    background-color: white;
     padding: 50px;
 
     overflow: auto;
@@ -34,7 +33,17 @@ body {
 
 .project-header {
     height: 200px;
-    background-color: gainsboro;
+    background-color: black;
+    overflow: hidden;
+    object-fit: contain;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-header img {
+    position: relative;
 }
 
 .project-description {

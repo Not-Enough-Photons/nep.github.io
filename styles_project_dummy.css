@@ -30,7 +30,6 @@ body {
 
 .project-banner {
     position: relative;
-    background-image: url("img/paranoia_banner.jpg");
     background-position: center;
     background-repeat: space;
 }
@@ -48,7 +47,7 @@ body {
     position: absolute;
     text-align: left;
 
-    top: 25%;
+    bottom: 0%;
     left: 0%;
 
     padding-left: 10px;
@@ -56,7 +55,7 @@ body {
 
 .project-info p {
     color: white;
-    font-size: 4.5em;
+    font-size: 5vh;
     font-family: "proximaNova";
 }
 

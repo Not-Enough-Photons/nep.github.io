@@ -21,5 +21,12 @@
         "projectRelease": "2021/2022",
         "projectGame": "BONEWORKS",
         "projectPlatform": "Valve Index"
+    },
+    "Smiler" : {
+        "projectBanner" : null,
+        "projectName": "Smiler",
+        "projectRelease": "2023 TBD",
+        "projectPlatform": "PC, Mac, Linux",
+        "description" : "In 1996, hundreds of file systems were compromised by a playful virtual force. Play along with a joyous data criminal, and hope that you can get all of your files back."        
     }
 }

@@ -33,8 +33,8 @@ function onInfoRead(data) {
     const description = document.querySelector("p#description");
 
     nameElement.textContent = baseInfo.projectName;
-    releaseElement.textContent = baseInfo.projectRelease;
-    gameElement.textContent = baseInfo.projectGame;
-    platformElement.textContent = baseInfo.projectPlatform;
+    releaseElement.textContent = "Release Date: " + baseInfo.projectRelease;
+    gameElement.textContent = "Game: " + baseInfo.projectGame;
+    platformElement.textContent = "Platform: " + baseInfo.projectPlatform;
     description.textContent = baseInfo.description;
 }

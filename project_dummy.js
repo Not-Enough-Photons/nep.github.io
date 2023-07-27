@@ -4,37 +4,37 @@ class ProjectInfo {
     projectRelease = "";
     projectGame = "";
     projectPlatform = "";
+    description = "";
 }
 
-const json = fetch("https://notenoughphotons.dev/project_information.json")
-.then((request) => { return request.json();})
-.then((data) => console.log(data));
+var projectName = "";
+var jsonData = null;
 
-var baseInfo = new ProjectInfo();
+const jsonRequest = fetch("https://notenoughphotons.dev/project_information.json")
+.then((request) => request.json());
 
-function LoadInfo(name) {
-    baseInfo.projectName = name;
+jsonRequest.then((data) => onInfoRead(data));
 
-    if(name == "MonoDirector") {
-        baseInfo.projectPlatform = "Valve Index";
-        baseInfo.projectGame = "BONELAB";
-        baseInfo.projectRelease = "2023 TBD";
-    }
-    else if(name == "Paranoia") { 
-        baseInfo.projectPlatform = "Valve Index";
-        baseInfo.projectGame = "BONELAB";
-        baseInfo.projectRelease = "2022";
-    }
+function setProject(projectName) {
+    this.projectName = projectName;
 }
 
-const nameElement = document.querySelector("p#name");
-const releaseElement = document.querySelector("p#release");
-const gameElement = document.querySelector("p#game");
-const platformElement = document.querySelector("p#platform");
+function onInfoRead(data) {
+    setProject("MonoDirector");
 
-LoadInfo("Paranoia");
+    const stringData = JSON.stringify(data);
+    const obj = JSON.parse(stringData);
+    var baseInfo = obj[projectName];
 
-nameElement.textContent = baseInfo.projectName;
-releaseElement.textContent = baseInfo.projectRelease;
-gameElement.textContent = baseInfo.projectGame;
-platformElement.textContent = baseInfo.projectPlatform;
+    const nameElement = document.querySelector("p#name");
+    const releaseElement = document.querySelector("p#release");
+    const gameElement = document.querySelector("p#game");
+    const platformElement = document.querySelector("p#platform");
+    const description = document.querySelector("p#description");
+
+    nameElement.textContent = baseInfo.projectName;
+    releaseElement.textContent = baseInfo.projectRelease;
+    gameElement.textContent = baseInfo.projectGame;
+    platformElement.textContent = baseInfo.projectPlatform;
+    description.textContent = baseInfo.description;
+}

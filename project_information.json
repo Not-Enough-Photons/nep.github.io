@@ -12,7 +12,8 @@
         "projectName" : "Paranoia",
         "projectRelease" : "2021",
         "projectGame": "BONEWORKS",
-        "projectPlatform": "Valve Index"
+        "projectPlatform": "Valve Index",
+        "description" : "Keep your flashlight close, and your clones closer. Blankbox gets more unstable with each iteration, and its catastrophic effects bleed out into the void."
     },
     "Scoreworks" : {
         "projectBanner" : null,

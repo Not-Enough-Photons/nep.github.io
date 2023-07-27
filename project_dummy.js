@@ -6,7 +6,7 @@ class ProjectInfo {
     projectPlatform = "";
 }
 
-const json = fetch("nep.github.io/project_information.json")
+const json = fetch("https://nep.github.io/project_information.json")
 .then((request) => { return request.json();})
 .then((data) => console.log(data));
 

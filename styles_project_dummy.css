@@ -53,6 +53,20 @@ body {
     padding-left: 10px;
 }
 
+.project-description { 
+    padding: 20px;
+}
+
+.project-container-2 h1 {
+    color:black;
+    font-family: "proximaNova";
+}
+
+.project-container-2 p {
+    color: black;
+    font-family: "proximaNova";
+}
+
 .project-info p {
     color: white;
     font-size: 5vh;

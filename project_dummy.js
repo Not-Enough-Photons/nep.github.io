@@ -10,6 +10,8 @@ class ProjectInfo {
 var projectName = "";
 var jsonData = null;
 
+const infoRoot = document.querySelector("div#project-info");
+
 const jsonRequest = fetch("https://notenoughphotons.dev/project_information.json")
 .then((request) => request.json());
 
@@ -20,12 +22,12 @@ function setProject(projectName) {
 }
 
 function onInfoRead(data) {
-    setProject("Paranoia");
+    setProject("Smiler");
 
     const stringData = JSON.stringify(data);
     const obj = JSON.parse(stringData);
     var baseInfo = obj[projectName];
-
+    
     const nameElement = document.querySelector("p#name");
     const releaseElement = document.querySelector("p#release");
     const gameElement = document.querySelector("p#game");

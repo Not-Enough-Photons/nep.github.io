@@ -1,14 +1,18 @@
 const elements = document.querySelectorAll('#project-parent p#project-button span#project-name');
+
 const projectVideos = {
-    "Hitmarkers": "img/project_hitmarkers.webm",
-    "Scoreworks": "img/project_scoreworks.webm",
-    "Paranoia": "img/project_paranoia.webm",
-    "MonoDirector": "img/project_monodirector.webm",
-    "Thrusters": "img/project_thrusters.webm",
-    "Smiler": "img/game_smiler.webm",
-    "Light Night": "img/game_lightnight.webm",
-    "Hide And Seek": "img/game_hideandseek.webm"
+    "Hitmarkers": "webm/project_hitmarkers.webm",
+    "Scoreworks": "webm/project_scoreworks.webm",
+    "Paranoia": "webm/project_paranoia.webm",
+    "MonoDirector": "webm/project_monodirector.webm",
+    "Thrusters": "webm/project_thrusters.webm",
+    "Smiler": "webm/game_smiler.webm",
+    "Light Night": "webm/game_lightnight.webm",
+    "Hide And Seek": "webm/game_hideandseek.webm"
 };
+
+const scrollbar = document.querySelector("div.project-listings");
+scrollbar.scrollIntoView();
 
 var currentVideo = "";
 var activeVideo = "";

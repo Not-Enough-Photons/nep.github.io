@@ -1,6 +1,6 @@
 {
     "project_monodirector" : {
-        "projectBanner" : "img/titlecards/titlecard_monodirector.png",
+        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_monodirector.png",
         "projectName" : "MonoDirector",
         "projectRelease" : "2023 TBD",
         "projectGame" : "BONELAB",
@@ -8,7 +8,7 @@
         "description" : "MonoDirector is BONELAB's first movie production mod. It first started out as a camera utility for BONEWORKS.\nIts features were limited at the time, and some of those have been used to make a couple of trailers for BONEWORKS mods.\nNow, it has been shaped to become an all-in-one video creation utility. Record your favorite scene from your show or movie, or make something original. Make a shoot-out, a brawl, a race, anything. MonoDirector makes it possible."
     },
     "project_paranoia" : {
-        "projectBanner" : "img/titlecards/titlecard_smiler.png",
+        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_smiler.png",
         "projectName" : "Paranoia",
         "projectRelease" : "2021",
         "projectGame": "BONEWORKS",
@@ -23,7 +23,7 @@
         "projectPlatform": "Valve Index"
     },
     "project_smiler" : {
-        "projectBanner" : "img/titlecards/titlecard_smiler.png",
+        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_smiler.png",
         "projectName": "Smiler",
         "projectRelease": "2023 TBD",
         "projectPlatform": "PC, Mac, Linux",

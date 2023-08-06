@@ -22,18 +22,23 @@ function setProject(projectName) {
 }
 
 function onInfoRead(data) {
-    setProject("Smiler");
+    var rawPageName = location.href.split("/").slice(-1).toString();
+    var pageName = rawPageName.split(".")[0];
+    console.log(pageName);
+    setProject(pageName);
 
     const stringData = JSON.stringify(data);
     const obj = JSON.parse(stringData);
     var baseInfo = obj[projectName];
     
+    const bannerElement = document.querySelector("img#project-banner");
     const nameElement = document.querySelector("p#name");
     const releaseElement = document.querySelector("p#release");
     const gameElement = document.querySelector("p#game");
     const platformElement = document.querySelector("p#platform");
     const description = document.querySelector("p#description");
 
+    bannerElement.src = baseInfo.projectBanner;
     nameElement.textContent = baseInfo.projectName;
     releaseElement.textContent = "Release Date: " + baseInfo.projectRelease;
     gameElement.textContent = "Game: " + baseInfo.projectGame;

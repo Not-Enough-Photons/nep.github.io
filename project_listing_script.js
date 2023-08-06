@@ -11,6 +11,17 @@ const projectVideos = {
     "Hide And Seek": "webm/game_hideandseek.webm"
 };
 
+const projectLinks = {
+    "Hitmarkers": "projects/project_hitmarkers.html",
+    "Scoreworks": "projects/project_scoreworks.html",
+    "Paranoia": "projects/project_paranoia.html",
+    "MonoDirector": "projects/project_monodirector.html",
+    "Thrusters": "projects/project_thrusters.html",
+    "Smiler": "projects/game_smiler.html",
+    "Light Night": "projects/game_lightnight.html",
+    "Hide And Seek": "projects/game_hideandseek.html"
+}
+
 const scrollbar = document.querySelector("div.project-listings");
 scrollbar.scrollIntoView();
 
@@ -32,6 +43,12 @@ function onHover(event) {
     activeVideo = currentVideo;
 }
 
+function onClick(event) {
+    var title = event.target.textContent;
+    window.location = projectLinks[title];
+}
+
 elements.forEach((element) => {
     element.addEventListener('mouseover', onHover);
+    element.addEventListener('click', onClick)
 });

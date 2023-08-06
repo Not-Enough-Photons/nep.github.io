@@ -1,6 +1,11 @@
 @font-face {
-    font-family: "proximaNova";
-    src: url("fontsfree-net-proxima-nova-bold-webfont.woff2");
+    font-family: "baukastenBold";
+    src: url("https://notenoughphotons.dev/fonts/HomepageBaukasten-Bold.woff2");
+}
+
+@font-face {
+    font-family: "baukastenBook";
+    src: url("https://notenoughphotons.dev/fonts/fonts/HomepageBaukasten-Book.woff2");
 }
 
 body {
@@ -21,7 +26,7 @@ body {
 
 .back-text {
     font-weight: bold;
-    font-family: "proximaNova";
+    font-family: "baukastenBook";
     color: black;
     text-decoration: none;
 }
@@ -35,7 +40,7 @@ body {
 }
 
 .project-title {
-    font-family: "proximaNova";
+    font-family: "baukastenBold";
     font-size: 50px;
     margin-top: -50px;
 

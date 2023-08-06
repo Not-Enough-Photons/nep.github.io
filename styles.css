@@ -45,7 +45,7 @@ svg {
     font-size: 48px; /* Adjust the font size as needed */
     font-weight: bold;
     margin-bottom: 20px; /* Add some space between company name and buttons */
-    font-family: "proximaNova";
+    font-family: "baukastenBold";
     text-shadow: 2px 2px 10px black;
     color: rgb(212, 25, 25);
 }
@@ -54,7 +54,7 @@ svg {
     font-size: 48px; /* Adjust the font size as needed */
     font-weight: bold;
     margin-bottom: 20px; /* Add some space between company name and buttons */
-    font-family: "proximaNova";
+    font-family: "baukastenBold";
     text-shadow: 2px 2px 10px black;
     color:white;
 }
@@ -74,7 +74,7 @@ svg {
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    font-family: "proximaNova";
+    font-family: "baukastenBook";
 
      /* Add the subtle glow effect using box-shadow */
      box-shadow: 0 0 5px rgba(0, 255, 0, 0); /* Start with a transparent glow */
@@ -90,8 +90,13 @@ svg {
 }
 
 @font-face {
-    font-family: "proximaNova";
-    src: url("fontsfree-net-proxima-nova-bold-webfont.woff2");
+    font-family: "baukastenBold";
+    src: url("https://notenoughphotons.dev/fonts/HomepageBaukasten-Bold.woff2");
+}
+
+@font-face {
+    font-family: "baukastenBook";
+    src: url("https://notenoughphotons.dev/fonts/fonts/HomepageBaukasten-Book.woff2");
 }
 
 @keyframes fadeIn {

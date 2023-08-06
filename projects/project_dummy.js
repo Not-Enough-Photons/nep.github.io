@@ -24,7 +24,6 @@ function setProject(projectName) {
 function onInfoRead(data) {
     var rawPageName = location.href.split("/").slice(-1).toString();
     var pageName = rawPageName.split(".")[0];
-    console.log(pageName);
     setProject(pageName);
 
     const stringData = JSON.stringify(data);

@@ -17,9 +17,9 @@ const projectLinks = {
     "Paranoia": "projects/project_paranoia.html",
     "MonoDirector": "projects/project_monodirector.html",
     "Thrusters": "projects/project_thrusters.html",
-    "Smiler": "projects/game_smiler.html",
-    "Light Night": "projects/game_lightnight.html",
-    "Hide And Seek": "projects/game_hideandseek.html"
+    "Smiler": "projects/project_smiler.html",
+    "Light Night": "projects/project_lightnight.html",
+    "Hide And Seek": "projects/project_hideandseek.html"
 }
 
 const scrollbar = document.querySelector("div.project-listings");

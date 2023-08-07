@@ -4,8 +4,11 @@ class ProjectInfo {
     projectRelease = "";
     projectGame = "";
     projectPlatform = "";
+    gallery = [];
     description = "";
 }
+
+let projectInfo = null;
 
 var projectName = "";
 var jsonData = null;
@@ -28,7 +31,7 @@ function onInfoRead(data) {
 
     const stringData = JSON.stringify(data);
     const obj = JSON.parse(stringData);
-    var baseInfo = obj[projectName];
+    projectInfo = obj[projectName];
     
     const bannerElement = document.querySelector("img#project-banner");
     const nameElement = document.querySelector("p#name");
@@ -37,10 +40,10 @@ function onInfoRead(data) {
     const platformElement = document.querySelector("p#platform");
     const description = document.querySelector("p#description");
 
-    bannerElement.src = baseInfo.projectBanner;
-    nameElement.textContent = baseInfo.projectName;
-    releaseElement.textContent = "Release Date: " + baseInfo.projectRelease;
-    gameElement.textContent = "Game: " + baseInfo.projectGame;
-    platformElement.textContent = "Platform: " + baseInfo.projectPlatform;
-    description.textContent = baseInfo.description;
+    bannerElement.src = projectInfo.projectBanner;
+    nameElement.textContent = projectInfo.projectName;
+    releaseElement.textContent = "Release Date: " + projectInfo.projectRelease;
+    gameElement.textContent = "Game: " + projectInfo.projectGame;
+    platformElement.textContent = "Platform: " + projectInfo.projectPlatform;
+    description.textContent = projectInfo.description;
 }

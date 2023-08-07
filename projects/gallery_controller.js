@@ -19,7 +19,7 @@ var nextImageButton = document.querySelector(".nextButton");
 var elements = [];
 var localIndex = 0;
 
-images.forEach((image) => { appendImage(image); });
+projectInfo.gallery.forEach((image) => { appendImage(image); });
 
 elements.forEach((element) => element.node.addEventListener("click", function(event) {
     onClickElement(element);

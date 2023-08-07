@@ -46,4 +46,6 @@ function onInfoRead(data) {
     gameElement.textContent = "Game: " + projectInfo.projectGame;
     platformElement.textContent = "Platform: " + projectInfo.projectPlatform;
     description.textContent = projectInfo.description;
+
+    galleryController_init();
 }

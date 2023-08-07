@@ -19,11 +19,13 @@ var nextImageButton = document.querySelector(".nextButton");
 var elements = [];
 var localIndex = 0;
 
-projectInfo.gallery.forEach((image) => { appendImage(image); });
+function galleryController_init() {
+    projectInfo.gallery.forEach((image) => { appendImage(image); });
 
-elements.forEach((element) => element.node.addEventListener("click", function(event) {
-    onClickElement(element);
-}));
+    elements.forEach((element) => element.node.addEventListener("click", function(event) {
+        onClickElement(element);
+    }));
+}
 
 function appendImage(image) {
     var divNode = document.createElement("div");

@@ -10,8 +10,6 @@ var imageView = document.querySelector(".gallery-image");
 let currentIndex = 1;
 let maxIndex = 0;
 
-onIndexChanged();
-
 previousImageButton.addEventListener("click", function() {
     previousIndex();
 });
@@ -27,7 +25,7 @@ closeButton.addEventListener("click", function() {
 
 function onIndexChanged() {
     pageIndex.textContent = `${currentIndex + 1}/${maxIndex}`
-    imageView.src = images[currentIndex];
+    imageView.src = projectInfo.gallery[currentIndex];
 }
 
 function setIndex(index) {

@@ -32,7 +32,7 @@
         "description" : "Keep your flashlight close, and your clones closer. Blankbox gets more unstable with each iteration, and its catastrophic effects bleed out into the void."
     },
     "project_scoreworks" : {
-        "projectBanner" : null,
+        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_scoreworks.jpg",
         "projectName": "Scoreworks",
         "projectRelease": "2021, 2022",
         "projectGame": "BONEWORKS",

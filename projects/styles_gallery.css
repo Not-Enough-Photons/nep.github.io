@@ -1,3 +1,8 @@
+:root {
+    --grid-width: 250px;
+    --grid-height: 250px;
+}
+
 .button-close {
     display: flex;
 
@@ -128,11 +133,11 @@
     transform: translate(-50%, -50%);
 
     z-index: 1;
-    overflow: hidden;
-
-    background-color: rgba(90, 90, 90, 25);
+    overflow: hidden;   
 
     opacity: 100%;
+
+    animation: fade-in 0.25s ease-in-out forwards;
 }
 
 .gallery-image-view > .gallery-image {
@@ -163,15 +168,22 @@
 
 .gallery-view-footer > .pageIndex {
     position: absolute;
+
     left: 50%;
-    bottom: 0%;
+    bottom: 10%;
+
+    font-family: "baukastenBook";
+    color: white;
+
+    z-index: 100;
 }
 
 .gallery-view-container {
     display: inline-grid;
 
-    grid-template-rows: 200px 200px 200px;
-    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: var(--grid-width) var(--grid-width) var(--grid-width) var(--grid-width);
+    grid-template-columns: var(--grid-height) var(--grid-height) var(--grid-height) var(--grid-height);
+    gap: 10px;
 
     width: 25%;
     height: 25%;
@@ -179,8 +191,6 @@
 
 .gallery-image {
     size: 100px;
-
-    border: solid;
     overflow: hidden;
 
     cursor: pointer;
@@ -206,6 +216,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@font-face {
+    font-family: "baukastenBook";
+    src: url("https://notenoughphotons.dev/fonts/HomepageBaukasten-Book.woff2");
 }
 
 @keyframes zoom-in {

@@ -19,7 +19,7 @@ nextImageButton.addEventListener("click", function() {
 });
 
 closeButton.addEventListener("click", function() {
-    galleryView.style.opacity = 0;
+    galleryView.style.display = "none";
     galleryView.style.zIndex = -1;
 });
 

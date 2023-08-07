@@ -48,6 +48,6 @@ function onClickElement(element) {
     galleryView.style.display = "block";
     galleryView.style.zIndex = 1;
 
-    setMaxElements(images.length);
+    setMaxElements(projectInfo.gallery.length);
     setIndex(element.index);
 }

@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Name</title>
+    <title>Thrusters</title>
     <link rel="stylesheet" href="styles_project_dummy.css">
-    <script src="project_dummy.js" defer></script>
+    <link rel="stylesheet" href="styles_gallery.css">
+    <script src="gallery_init.js" defer></script>
 </head>
 <body>
     <div class="page">
+        <div class="gallery-image-view">
+            <div class="button-close"><img src="https://notenoughphotons.dev/img/cross.png"></div>
+            <img class="gallery-image" src="">
+            <div class="gallery-view-footer">
+                <div class="backButton"><img src="https://notenoughphotons.dev/img/arrow.png"></div>
+                <p class="pageIndex">0/0</p>
+                <div class="nextButton"><img src="https://notenoughphotons.dev/img/arrow.png"></div>
+            </div>
+        </div>
+        
         <div class="project-header">
             <section class="project-banner-container">
                 <img id = "project-banner" src="">
@@ -25,6 +36,10 @@
             <section class="project-description">
                 <h1>Overview</h1>
                 <p class="info-item" id="description"></p>
+
+                <h1>Gallery</h1>
+                <div class="gallery-view-container">
+                </div>
             </section>
         </div>
     </div>

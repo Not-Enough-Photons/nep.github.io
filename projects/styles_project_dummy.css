@@ -23,6 +23,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    animation: fade-in 1s ease-in forwards;
 }
 
 .project-header {
@@ -30,6 +32,28 @@ body {
     background-color: black;
     width: 100%;
     height: 98vh;
+}
+
+.project-header > .project-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: left;
+    mix-blend-mode: normal;
+
+    bottom: 0%;
+    left: 0%;
+
+    padding: 50px;
+
+    perspective: 100px;
+
+    animation: fade-in-text 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.project-info > * {
+    color: green;
+    text-shadow: gray 2px 2px 5px;
 }
 
 .project-banner-container {
@@ -42,35 +66,21 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    animation: fade-in-banner 1s ease-in-out forwards;
 }
 
 .project-body {
-    background-color: black;
+    background-color: rgb(10, 10, 10);
 
     width: 100%;
-    height: 500px;
-}
-
-.project-info {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    text-align: left;
-    mix-blend-mode: normal;
-
-    bottom: 0%;
-    left: 0%;
-
-    padding: 50px;
-}
-
-.project-info > * {
-    color: green;
-    text-shadow: gray 2px 2px 5px;
+    height: 100%;
 }
 
 .project-description { 
-    padding: 50px;
+    padding-top: 0.25%;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .project-description h1 {
@@ -94,4 +104,35 @@ body {
 .info-item {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+@keyframes fade-in-text {
+    from { 
+        transform: translateX(-50px);
+        opacity: 0% 
+    }
+    to { 
+        transform: translateX(0px);
+        opacity: 100% 
+    }
+}
+
+@keyframes fade-in-banner {
+    from { 
+        transform: scale(1.05); 
+        opacity: 0%; 
+    }
+    to { 
+        transform: scale(1); 
+        opacity: 100%; 
+    }
+}
+
+@keyframes fade-in {
+    from { 
+        opacity: 0%; 
+    }
+    to { 
+        opacity: 100%; 
+    }
 }

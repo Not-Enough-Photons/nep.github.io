@@ -39,13 +39,21 @@ function onInfoRead(data) {
     const gameElement = document.querySelector("p#game");
     const platformElement = document.querySelector("p#platform");
     const description = document.querySelector("p#description");
-
+    const galleryHeader = document.querySelector("h1.gallery-header");
+    
     bannerElement.src = projectInfo.projectBanner;
     nameElement.textContent = projectInfo.projectName;
     releaseElement.textContent = "Release Date: " + projectInfo.projectRelease;
     gameElement.textContent = "Game: " + projectInfo.projectGame;
     platformElement.textContent = "Platform: " + projectInfo.projectPlatform;
     description.textContent = projectInfo.description;
+
+    nameElement.style.display = projectInfo.projectName != null ? "block" : "none";
+    releaseElement.style.display = projectInfo.projectRelease != null ? "block" : "none";
+    gameElement.style.display = projectInfo.projectGame != null ? "block" : "none";
+    platformElement.style.display = projectInfo.projectPlatform != null ? "block" : "none";
+    description.style.display = projectInfo.description != null ? "block" : "none";
+    galleryHeader.style.display = projectInfo.gallery != null ? "block" : "none";
 
     galleryController_init();
 }

@@ -77,6 +77,10 @@ body {
     height: 100%;
 }
 
+.project-body > .gallery-header {
+    
+}
+
 .project-description { 
     padding-top: 0.25%;
     padding-left: 50px;

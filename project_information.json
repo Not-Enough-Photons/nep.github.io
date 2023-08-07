@@ -13,35 +13,38 @@
         ],
         "description" : "MonoDirector is BONELAB's first movie production mod. It first started out as a camera utility for BONEWORKS.\nIts features were limited at the time, and some of those have been used to make a couple of trailers for BONEWORKS mods.\nNow, it has been shaped to become an all-in-one video creation utility. Record your favorite scene from your show or movie, or make something original. Make a shoot-out, a brawl, a race, anything. MonoDirector makes it possible."
     },
+    "project_hitmarkers" : {
+        "projectBanner" : null,
+        "projectName" : "Hitmarkers",
+        "projectRelease" : "2021, 2022, 2023",
+        "projectGame" : "BONELAB, BONEWORKS",
+        "projectPlatform" : "Valve Index, Quest 2",
+        "gallery" : null,
+        "description": "Shoot and eliminate your foes with accurate feedback. Hitmarkers is a simple mod that adds visual/auditory feedback to any hit or kill you make, making for very satisfying combat!"
+    },
     "project_paranoia" : {
         "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_paranoia.jpg",
         "projectName" : "Paranoia",
         "projectRelease" : "2021",
         "projectGame": "BONEWORKS",
         "projectPlatform": "Valve Index",
-        "gallery": [
-            ""
-        ],
+        "gallery": null,
         "description" : "Keep your flashlight close, and your clones closer. Blankbox gets more unstable with each iteration, and its catastrophic effects bleed out into the void."
     },
     "project_scoreworks" : {
         "projectBanner" : null,
         "projectName": "Scoreworks",
-        "projectRelease": "2021/2022",
+        "projectRelease": "2021, 2022",
         "projectGame": "BONEWORKS",
         "projectPlatform": "Valve Index",
-        "gallery": [
-            ""
-        ]
+        "gallery": null
     },
     "project_smiler" : {
         "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_smiler.png",
         "projectName": "Smiler",
         "projectRelease": "2023 TBD",
         "projectPlatform": "PC, Mac, Linux",
-        "gallery": [
-            ""
-        ],
+        "gallery": null,
         "description" : "In 1996, hundreds of file systems were compromised by a playful virtual force. Play along with a joyous data criminal, and hope that you can get all of your files back."        
     }
 }

@@ -6,10 +6,10 @@
         "projectGame" : "BONELAB",
         "projectPlatform" : "Valve Index",
         "gallery": [
-            "https://notenoughphotons.dev/projects/monodirector/gallery1.png",
-            "https://notenoughphotons.dev/projects/monodirector/gallery2.png",
-            "https://notenoughphotons.dev/projects/monodirector/gallery3.png",
-            "https://notenoughphotons.dev/projects/monodirector/gallery4.png"
+            "./mods/monodirector/gallery1.png",
+            "./mods/monodirector/gallery2.png",
+            "./mods/monodirector/gallery3.png",
+            "./mods/monodirector/gallery4.png"
         ],
         "description" : "MonoDirector is BONELAB's first movie production mod. It first started out as a camera utility for BONEWORKS.\nIts features were limited at the time, and some of those have been used to make a couple of trailers for BONEWORKS mods.\nNow, it has been shaped to become an all-in-one video creation utility. Record your favorite scene from your show or movie, or make something original. Make a shoot-out, a brawl, a race, anything. MonoDirector makes it possible."
     },

@@ -45,9 +45,9 @@ function onInfoRead(data) {
     
     bannerElement.src = projectInfo.projectBanner;
     nameElement.textContent = projectInfo.projectName;
-    releaseElement.textContent = "Release Date: " + projectInfo.projectRelease;
+    releaseElement.textContent = "Release: " + projectInfo.projectRelease;
     gameElement.textContent = "Game: " + projectInfo.projectGame;
-    platformElement.textContent = "Platform: " + projectInfo.projectPlatform;
+    platformElement.textContent = "Platform(s): " + projectInfo.projectPlatform;
     description.textContent = projectInfo.description;
 
     nameElement.style.display = projectInfo.projectName != null ? "block" : "none";

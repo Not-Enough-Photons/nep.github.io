@@ -46,5 +46,21 @@
         "projectPlatform": "PC, Mac, Linux",
         "gallery": null,
         "description" : "In 1996, hundreds of file systems were compromised by a playful virtual force. Play along with a joyous data criminal, and hope that you can get all of your files back."        
+    },
+    "game_lightnight" : {
+        "projectBanner" : null,
+        "projectName" : "Light Night",
+        "projectRelease": "2024 TBD",
+        "projectPlatform": "PCVR",
+        "gallery": null,
+        "description": "After a tragedy, we are thrust into our own memories. Explore an unstable and chaotic world, and piece together your fragmented thoughts to reclaim your personal identity."
+    },
+    "game_hideandseek" : {
+        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_hideandseek.png",
+        "projectName" : "Hide And Seek",
+        "projectRelease": "TBD",
+        "projectPlatform": "PC, Mac, Linux",
+        "gallery": null,
+        "description": "Somewhere in the depths of a free 3D game website, is a once-thriving game with zero players. You enter Hide and Seek, a decision led by your nostalgia. However, you are not alone. Use the skills you acquired from your many years of Hide and Seek experience to win the game."
     }
 }

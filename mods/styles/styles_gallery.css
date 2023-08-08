@@ -1,0 +1,234 @@
+:root {
+    --grid-width: 250px;
+    --grid-height: 250px;
+}
+
+.button-close {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    background-color: white;
+
+    top: 5%;
+    right: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 75px;
+
+    cursor: pointer;
+}
+
+.button-close > img {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.button-close:hover {
+    background-color: lightgray;
+}
+
+.button-close:active {
+    background-color: gainsboro;
+}
+
+.button-close:disabled {
+    cursor: none;
+}
+
+.backButton {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    background-color: white;
+
+    top: 50%;
+    left: 50px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 75px;
+
+    cursor: pointer;
+}
+
+.backButton > img {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.backButton:hover {
+    background-color: lightgray;
+}
+
+.backButton:active {
+    background-color: gainsboro;
+}
+
+.backButton:disabled {
+    cursor: none;
+}
+
+.nextButton {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    background-color: white;
+
+    top: 50%;
+    right: 50px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 75px;
+
+    cursor: pointer;
+}
+
+.nextButton:hover {
+    background-color: lightgray;
+}
+
+.nextButton:active {
+    background-color: gainsboro;
+}
+
+.nextButton:disabled {
+    cursor: none;
+}
+
+.nextButton > img {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    transform: rotate(180deg)
+}
+
+.gallery-image-view {
+    display: none;
+    position: fixed;
+
+    width: 1280px;
+    height: 720px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+    overflow: hidden;   
+
+    opacity: 100%;
+
+    animation: fade-in 0.25s ease-in-out forwards;
+}
+
+.gallery-image-view > .gallery-image {
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-image-view > .gallery-view-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-image-view > .button-close { 
+    position: absolute;
+    z-index: 2;
+}
+
+.gallery-view-footer > button {
+    width: 15%;
+}
+
+.gallery-view-footer > .pageIndex {
+    position: absolute;
+
+    left: 50%;
+    bottom: 10%;
+
+    font-family: "baukastenBook";
+    color: white;
+
+    z-index: 100;
+}
+
+.gallery-view-container {
+    display: inline-grid;
+
+    grid-template-rows: var(--grid-width) var(--grid-width) var(--grid-width) var(--grid-width);
+    grid-template-columns: var(--grid-height) var(--grid-height) var(--grid-height) var(--grid-height);
+    gap: 10px;
+
+    width: 25%;
+    height: 25%;
+}
+
+.gallery-image {
+    size: 100px;
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.gallery-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    animation-name: zoom-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.gallery-image > img:hover {
+    animation-name: zoom-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.gallery-image > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: "baukastenBook";
+    src: url("https://notenoughphotons.dev/fonts/HomepageBaukasten-Book.woff2");
+}
+
+@keyframes zoom-in {
+    from { transform: scale(1.0); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes zoom-out {
+    from { transform: scale(1.1); }
+    to { transform: scale(1.0); }
+}

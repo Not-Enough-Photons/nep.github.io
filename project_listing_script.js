@@ -12,14 +12,14 @@ const projectVideos = {
 };
 
 const projectLinks = {
-    "Hitmarkers": "projects/project_hitmarkers.html",
-    "Scoreworks": "projects/project_scoreworks.html",
-    "Paranoia": "projects/project_paranoia.html",
-    "MonoDirector": "projects/project_monodirector.html",
-    "Thrusters": "projects/project_thrusters.html",
-    "Smiler": "projects/project_smiler.html",
-    "Light Night": "projects/project_lightnight.html",
-    "Hide And Seek": "projects/project_hideandseek.html"
+    "Hitmarkers": "mods/mod_hitmarkers.html",
+    "Scoreworks": "mods/mod_scoreworks.html",
+    "Paranoia": "mods/mod_paranoia.html",
+    "MonoDirector": "mods/mod_monodirector.html",
+    "Thrusters": "mods/mod_thrusters.html",
+    "Smiler": "games/game_smiler.html",
+    "Light Night": "games/game_lightnight.html",
+    "Hide And Seek": "games/game_hideandseek.html"
 }
 
 const scrollbar = document.querySelector("div.project-listings");

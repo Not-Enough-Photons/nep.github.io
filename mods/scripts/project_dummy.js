@@ -93,6 +93,11 @@ function buildDummyPage() {
                         <h1 class="gallery-header">Gallery</h1>
                         <div class="gallery-view-container">
                         </div>
+
+                        <h1 class="gallery-header">Downloads</h1>
+                        <div class="download-container">
+                            <a href=""><p>Thunderstore</p></a>
+                        </div>
                     </section>
                 </div>
             </div>

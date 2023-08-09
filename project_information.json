@@ -37,7 +37,17 @@
         "projectRelease": "2021, 2022",
         "projectGame": "BONEWORKS",
         "projectPlatform": "Valve Index",
-        "gallery": null
+        "gallery": null,
+        "description": "Rack up points, keep combos, and maintain a high score with Scoreworks, the first BONEWORKS score mod."
+    },
+    "mod_thrusters" : {
+        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_thrusters.jpg",
+        "projectName": "Thrusters",
+        "projectRelease": "2021",
+        "projectGame": "BONEWORKS",
+        "projectPlatform": "Valve Index",
+        "gallery": null,
+        "description": "A mod that lets you attach thrusters to anything. Make planes, rockets, jetpacks, and more!"
     },
     "game_smiler" : {
         "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_smiler.png",

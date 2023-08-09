@@ -58,15 +58,13 @@ function onInfoRead(data) {
     description.style.display = projectInfo.description != null ? "block" : "none";
     galleryHeader.style.display = projectInfo.gallery != null ? "block" : "none";
 
-    backButton.href = "https://notenoughphotons.dev/mods.html";
-
     galleryController_init();
 }
 
 function buildDummyPage() { 
     var page = `
         <div class="back-button">
-            <a class="back-text" href="">Back</a>
+            <a class="back-text" href="https://notenoughphotons.dev/mods.html">Back</a>
         </div>
         <div class="page">
            

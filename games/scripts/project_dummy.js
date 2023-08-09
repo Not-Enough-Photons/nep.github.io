@@ -35,6 +35,7 @@ function onInfoRead(data) {
     const obj = JSON.parse(stringData);
     projectInfo = obj[projectName];
     
+    const backButton = document.querySelector(".back-button");
     const bannerElement = document.querySelector("img#project-banner");
     const nameElement = document.querySelector("p#name");
     const releaseElement = document.querySelector("p#release");
@@ -57,12 +58,18 @@ function onInfoRead(data) {
     description.style.display = projectInfo.description != null ? "block" : "none";
     galleryHeader.style.display = projectInfo.gallery != null ? "block" : "none";
 
+    backButton.href = "https://notenoughphotons.dev/games.html";
+
     galleryController_init();
 }
 
 function buildDummyPage() { 
     var page = `
+        <div class="back-button">
+            <a class="back-text" href="">Back</a>
+        </div>
         <div class="page">
+           
             <div class="gallery-image-view">
                 <div class="button-close"><img src="https://notenoughphotons.dev/img/cross.png"></div>
                 <img class="gallery-image" src="">
@@ -89,9 +96,14 @@ function buildDummyPage() {
                     <section class="project-description">
                         <h1>Overview</h1>
                         <p class="info-item" id="description"></p>
-                        
+
                         <h1 class="gallery-header">Gallery</h1>
                         <div class="gallery-view-container">
+                        </div>
+
+                        <h1 class="gallery-header">Downloads</h1>
+                        <div class="download-container">
+                            <a href=""><p>Thunderstore</p></a>
                         </div>
                     </section>
                 </div>

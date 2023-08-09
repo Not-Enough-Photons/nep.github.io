@@ -17,6 +17,35 @@ body {
     background-color: black;
 }
 
+.back-button {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    z-index: 2;
+
+    top: 10px;
+
+    padding: 5px 15px;
+    margin: 15px;
+    background-color: #ffffff;
+    border-radius: 25px;
+
+     /* Add the subtle glow effect using box-shadow */
+     box-shadow: 0 0 5px rgba(0, 255, 0, 0); /* Start with a transparent glow */
+     transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.back-text {
+    font-weight: bold;
+    font-family: "baukastenBook";
+
+    color: black;
+    text-decoration: none;
+}
+
 .page {
     position: relative;
     display: flex;

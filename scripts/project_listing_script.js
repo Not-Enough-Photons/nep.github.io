@@ -19,7 +19,7 @@ const projectLinks = {
     "Thrusters": "mods/mod_thrusters.html",
     "Smiler": "games/game_smiler.html",
     "Light Night": "games/game_lightnight.html",
-    "Hide And Seek": "games/game_hideandseek.html"
+    "Hide And Seek": "games/game_hide_and_seek.html"
 }
 
 const scrollbar = document.querySelector("div.project-listings");
@@ -45,6 +45,11 @@ function onHover(event) {
 
 function onClick(event) {
     var title = event.target.textContent;
+
+    if(projectLinks[title] == null) {
+        return;
+    }
+
     window.location = projectLinks[title];
 }
 

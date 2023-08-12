@@ -19,6 +19,8 @@ var nextImageButton = document.querySelector(".nextButton");
 var elements = [];
 var localIndex = 0;
 
+galleryController_init();
+
 function galleryController_init() {
     projectInfo.gallery.forEach((image) => { appendImage(image); });
 

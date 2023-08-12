@@ -15,12 +15,10 @@ var jsonData = null;
 
 const infoRoot = document.querySelector("div#project-info");
 
+const json = fetch('/project_information.json').then((info) => info.json());
+json.then((data) => onInfoRead(data));
+
 buildDummyPage();
-
-const jsonRequest = fetch("https://notenoughphotons.dev/project_information.json")
-.then((request) => request.json());
-
-jsonRequest.then((data) => onInfoRead(data));
 
 function setProject(projectName) {
     this.projectName = projectName;
@@ -43,6 +41,7 @@ function onInfoRead(data) {
     const platformElement = document.querySelector("p#platform");
     const description = document.querySelector("p#description");
     const galleryHeader = document.querySelector("h1.gallery-header");
+    const galleryGrid = document.querySelector(".gallery-view-container");
     
     bannerElement.src = projectInfo.projectBanner;
     nameElement.textContent = projectInfo.projectName;
@@ -57,24 +56,23 @@ function onInfoRead(data) {
     platformElement.style.display = projectInfo.projectPlatform != null ? "block" : "none";
     description.style.display = projectInfo.description != null ? "block" : "none";
     galleryHeader.style.display = projectInfo.gallery != null ? "block" : "none";
-
-    galleryController_init();
+    galleryGrid.style.display = projectInfo.gallery != null ? "block" : "none";
 }
 
 function buildDummyPage() { 
     var page = `
         <div class="back-button">
-            <a class="back-text" href="https://notenoughphotons.dev/mods.html">Back</a>
+            <a class="back-text" href="/mods.html">Back</a>
         </div>
         <div class="page">
            
             <div class="gallery-image-view">
-                <div class="button-close"><img src="https://notenoughphotons.dev/img/cross.png"></div>
+                <div class="button-close"><img src="/img/cross.png"></div>
                 <img class="gallery-image" src="">
                 <div class="gallery-view-footer">
-                    <div class="backButton"><img src="https://notenoughphotons.dev/img/arrow.png"></div>
+                    <div class="backButton"><img src="/img/arrow.png"></div>
                     <p class="pageIndex">0/0</p>
-                    <div class="nextButton"><img src="https://notenoughphotons.dev/img/arrow.png"></div>
+                    <div class="nextButton"><img src="/img/arrow.png"></div>
                 </div>
             </div>
             

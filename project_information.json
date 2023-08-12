@@ -1,20 +1,22 @@
 {
     "mod_monodirector" : {
-        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_monodirector.png",
+        "projectPageName" : "mod_monodirector",
+        "projectBanner" : "/img/titlecards/titlecard_monodirector.png",
         "projectName" : "MonoDirector",
         "projectRelease" : "2023 TBD",
         "projectGame" : "BONELAB",
         "projectPlatform" : "Valve Index",
         "gallery": [
-            "./monodirector/gallery1.png",
-            "./monodirector/gallery2.png",
-            "./monodirector/gallery3.png",
-            "./monodirector/gallery4.png"
+            "/mods/monodirector/gallery1.png",
+            "/mods/monodirector/gallery2.png",
+            "/mods/monodirector/gallery3.png",
+            "/mods/monodirector/gallery4.png"
         ],
         "description" : "MonoDirector is BONELAB's first movie production mod. It first started out as a camera utility for BONEWORKS.\nIts features were limited at the time, and some of those have been used to make a couple of trailers for BONEWORKS mods.\nNow, it has been shaped to become an all-in-one video creation utility. Record your favorite scene from your show or movie, or make something original. Make a shoot-out, a brawl, a race, anything. MonoDirector makes it possible."
     },
     "mod_hitmarkers" : {
-        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_hitmarkers.png",
+        "projectPageName" : "mod_hitmarkers",
+        "projectBanner" : "/img/titlecards/titlecard_hitmarkers.png",
         "projectName" : "Hitmarkers",
         "projectRelease" : "2021, 2022, 2023",
         "projectGame" : "BONELAB, BONEWORKS",
@@ -23,7 +25,8 @@
         "description": "Shoot and eliminate your foes with accurate feedback. Hitmarkers is a simple mod that adds visual/auditory feedback to any hit or kill you make, making for very satisfying combat!"
     },
     "mod_paranoia" : {
-        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_paranoia.jpg",
+        "projectPageName" : "mod_paranoia",
+        "projectBanner" : "/img/titlecards/titlecard_paranoia.jpg",
         "projectName" : "Paranoia",
         "projectRelease" : "2021",
         "projectGame": "BONEWORKS",
@@ -32,7 +35,8 @@
         "description" : "Keep your flashlight close, and your clones closer. Blankbox gets more unstable with each iteration, and its catastrophic effects bleed out into the void."
     },
     "mod_scoreworks" : {
-        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_scoreworks.jpg",
+        "projectPageName" : "mod_scoreworks",
+        "projectBanner" : "/img/titlecards/titlecard_scoreworks.jpg",
         "projectName": "Scoreworks",
         "projectRelease": "2021, 2022",
         "projectGame": "BONEWORKS",
@@ -41,7 +45,8 @@
         "description": "Rack up points, keep combos, and maintain a high score with Scoreworks, the first BONEWORKS score mod."
     },
     "mod_thrusters" : {
-        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_thrusters.jpg",
+        "projectPageName" : "mod_thrusters",
+        "projectBanner" : "/img/titlecards/titlecard_thrusters.jpg",
         "projectName": "Thrusters",
         "projectRelease": "2021",
         "projectGame": "BONEWORKS",
@@ -50,23 +55,26 @@
         "description": "A mod that lets you attach thrusters to anything. Make planes, rockets, jetpacks, and more!"
     },
     "game_smiler" : {
-        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_smiler.png",
+        "projectPageName" : "game_smiler",
+        "projectBanner" : "/img/titlecards/titlecard_smiler.png",
         "projectName": "Smiler",
         "projectRelease": "2023 TBD",
         "projectPlatform": "PC, Mac, Linux",
         "gallery": null,
         "description" : "In 1996, hundreds of file systems were compromised by a playful virtual force. Play along with a joyous data criminal, and hope that you can get all of your files back."        
     },
-    "game_lightnight" : {
-        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_lightnight.png",
+    "game_light_night" : {
+        "projectPageName" : "game_light_night",
+        "projectBanner" : "/img/titlecards/titlecard_lightnight.png",
         "projectName" : "Light Night",
         "projectRelease": "2024 TBD",
         "projectPlatform": "PCVR",
         "gallery": null,
         "description": "After a tragedy, we are thrust into our own memories. Explore an unstable and chaotic world, and piece together your fragmented thoughts to reclaim your personal identity."
     },
-    "game_hideandseek" : {
-        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_hideandseek.png",
+    "game_hide_andseek" : {
+        "projectPageName" : "game_hide_and_seek",
+        "projectBanner" : "/img/titlecards/titlecard_hideandseek.png",
         "projectName" : "Hide And Seek",
         "projectRelease": "TBD",
         "projectPlatform": "PC, Mac, Linux",

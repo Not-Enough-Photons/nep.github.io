@@ -25,7 +25,7 @@ closeButton.addEventListener("click", function() {
 
 function onIndexChanged() {
     pageIndex.textContent = `${currentIndex + 1}/${maxIndex}`
-    imageView.src = projectInfo.gallery[currentIndex];
+    imageView.src = imageElements[currentIndex].url;
 }
 
 function setIndex(index) {

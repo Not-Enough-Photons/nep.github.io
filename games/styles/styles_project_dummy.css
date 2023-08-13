@@ -5,12 +5,12 @@
 
 @font-face {
     font-family: "baukastenBold";
-    src: url("https://notenoughphotons.dev/fonts/HomepageBaukasten-Bold.woff2");
+    src: url("../../fonts/HomepageBaukasten-Bold.woff2");
 }
 
 @font-face {
     font-family: "baukastenBook";
-    src: url("https://notenoughphotons.dev/fonts/HomepageBaukasten-Book.woff2");
+    src: url("../../fonts/HomepageBaukasten-Book.woff2");
 }
 
 body {

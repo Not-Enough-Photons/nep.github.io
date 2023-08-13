@@ -3,18 +3,13 @@
     --width-side-2: 350px;
 }
 
-@font-face {
-    font-family: "baukastenBold";
-    src: url("https://notenoughphotons.dev/fonts/HomepageBaukasten-Bold.woff2");
-}
-
-@font-face {
-    font-family: "baukastenBook";
-    src: url("https://notenoughphotons.dev/fonts/HomepageBaukasten-Book.woff2");
-}
-
 body {
     background-color: black;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .page {
@@ -95,8 +90,9 @@ body {
 }
 
 .project-info > * {
-    color: green;
     text-shadow: gray 2px 2px 5px;
+
+    mix-blend-mode: difference;
 }
 
 .project-banner-container {
@@ -120,14 +116,11 @@ body {
     height: 100%;
 }
 
-.project-body > .gallery-header {
-    
-}
-
 .project-description { 
     padding-top: 0.25%;
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 150px;
 }
 
 .project-description h1 {
@@ -151,6 +144,77 @@ body {
 .info-item {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.download-container {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    flex-direction: row;
+}
+
+.download-element {
+    border: solid;
+    border-color: rgb(20, 20, 20);
+    border-radius: 50px;
+
+    background-color: rgb(25, 25, 25);
+}
+
+.download-element {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-basis: 200px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    overflow: hidden;
+}
+
+.download-element:hover {
+    animation: download-text-in 0.1s ease-in-out forwards;
+}
+
+.download-element:active {
+    background-color: rgb(30, 30, 30);
+    border-color: rgb(40, 40, 40);
+}
+
+.download-element > p {
+    margin: 5px;
+    filter: drop-shadow(2px 2px 5px black);
+    user-select: none;
+}
+
+.download-element > img {
+    width: 100px;
+    height: 100px;
+    
+    margin: 5px;
+
+    object-fit: contain;
+
+    user-select: none;
+}
+
+@font-face {
+    font-family: "baukastenBold";
+    src: url("../../fonts/HomepageBaukasten-Bold.woff2");
+}
+
+@font-face {
+    font-family: "baukastenBook";
+    src: url("../../fonts/HomepageBaukasten-Book.woff2");
 }
 
 @keyframes fade-in-text {
@@ -181,5 +245,23 @@ body {
     }
     to { 
         opacity: 100%; 
+    }
+}
+
+@keyframes download-text-in {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.025);
+    }
+}
+
+@keyframes download-text-out {
+    from {
+        transform: scale(1.025);
+    }
+    to {
+        transform: scale(1);
     }
 }

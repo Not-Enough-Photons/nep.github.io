@@ -6,6 +6,5 @@ function loadScript(url) {
     head.appendChild(script);
 }
 
-loadScript("scripts/project_dummy.js");
-loadScript("scripts/gallery_controller.js");
-loadScript("scripts/gallery_view.js");
+loadScript("../scripts/gallery_view.js");
+loadScript("../scripts/gallery_controller.js");

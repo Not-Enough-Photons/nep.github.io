@@ -41,6 +41,8 @@ function galleryController_init() {
     imageElements.forEach((imageElement) => imageElement.node.addEventListener("click", function(event) {
         onClickElement(imageElement);
     }));
+
+    page.addEventListener("onclick", onClickOff);
 }
 
 function onClickElement(element) {

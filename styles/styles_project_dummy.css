@@ -3,15 +3,127 @@
 :root {
     --width-side-1: 650px;
     --width-side-2: 350px;
+    --description-width: 60vw;
+    --description-color: rgb(10, 10, 10);
 }
 
 body {
-    background-color: black;
+    background-color: var(--description-color);
 }
 
 a {
     color: inherit;
     text-decoration: none;
+}
+
+h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-family: "baukastenBold";
+}
+
+p {
+    color: white;
+    font-family: "baukastenBook";
+    font-size: 1.5rem;   
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height: 98vh;
+}
+
+header > .project-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: left;
+    mix-blend-mode: normal;
+
+    bottom: 0%;
+    left: 0%;
+
+    padding: 50px;
+
+    opacity: 0%;
+
+    animation-name: fade-in-text;
+    animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+main {
+    background-color: var(--description-color);
+}
+
+footer {
+    background-color: var(--description-color);
+    width: var(--description-width);
+    padding-top: 0.75rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1.25rem;
+
+    opacity: 75%;
+}
+
+footer h1 {
+    font-size: 1.25rem;
+    user-select: none;
+}
+
+.footer-subsections {
+    display: flex;
+
+    margin: 1rem 0rem;
+}
+
+.footer-subsections * {
+    flex: 1;
+}
+
+.footer-page-redirects p {
+    color: darkred;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.footer-social-redirects p {
+    color: darkred;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.page-links,
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.page-links p,
+.social-links p {
+    color: white;
+    text-align: left;
+    font-size: 0.75rem;
+
+    flex-basis: 50rem;
+}
+
+.page-links p:hover,
+.social-links p:hover {
+    color: red;
+}
+
+.footer-copyright-text {
+    padding-top: 1.5rem;
+    font-size: 0.75rem;
+
+    border-top: 0.1rem solid rgb(50, 50, 50);
 }
 
 .page {
@@ -21,7 +133,7 @@ a {
     justify-content: center;
     align-items: center;
 
-    animation: fade-in 1s ease-in forwards;
+    animation: fade-in 0.5s ease-in forwards;
 }
 
 .back-button {
@@ -61,86 +173,37 @@ a {
     size: 100px;
 }
 
-.project-header {
-    position: relative;
-    background-color: black;
-    width: 100%;
-    height: 98vh;
-}
-
-.project-header > .project-info {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    text-align: left;
-    mix-blend-mode: normal;
-
-    bottom: 0%;
-    left: 0%;
-
-    padding: 50px;
-
-    perspective: 100px;
-
-    opacity: 0%;
-
-    animation-name: fade-in-text;
-    animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-    animation-duration: 3s;
-    animation-delay: 1.25s;
-    animation-fill-mode: forwards;
-}
-
-.project-info > * {
-    text-shadow: gray 2px 2px 5px;
-
-    mix-blend-mode: difference;
-}
-
-.project-banner-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.project-banner-container img {
+header img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 
-    animation: fade-in-banner 1s ease-in-out forwards;
+    animation-name: fade-in-banner;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: forwards;
 }
 
-.project-body {
-    background-color: rgb(10, 10, 10);
-
-    width: 100%;
-    height: 100%;
+.project-info p {
+    color: white;
+    font-size: 2.5rem;
+    font-family: "baukastenBold";
+    text-shadow: gray 2px 2px 5px;
+    mix-blend-mode: difference;
 }
 
 .project-description { 
-    padding-top: 0.25%;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 150px;
+    width: var(--description-width);
+    padding-top: 0.75rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1.25rem;
 }
 
 .project-description h1 {
     color:white;
     font-family: "baukastenBold";
-    font-size: 50px;
-}
-
-.project-description p {
-    color: white;
-    font-family: "baukastenBook";
-    font-size: 25px;
-}
-
-.project-info p {
-    color: white;
-    font-size: 4vh;
-    font-family: "baukastenBold";
+    font-size: 2.5rem;
 }
 
 .info-item {
@@ -150,10 +213,6 @@ a {
 
 .download-container {
     display: flex;
-
-    width: 100%;
-    height: 100%;
-
     flex-direction: row;
 }
 
@@ -209,30 +268,40 @@ a {
     user-select: none;
 }
 
+.company-logo-red {
+    color: rgb(212, 25, 25);
+}
+
+@media screen and (max-width: 680px) {
+    .footer-subsections {
+        display: block;
+    }
+}
+
 @keyframes fade-in-text {
     from { 
-        transform: translateX(-5px);
+        transform: translateX(-300px) scale(1.5) rotateZ(-5deg);
         opacity: 0% 
     }
     to { 
-        transform: translateX(0px);
+        transform: translateX(0px) scale(1) rotateZ(0deg);
         opacity: 100% 
     }
 }
 
 @keyframes fade-in-banner {
-    from { 
-        transform: scale(1.05); 
+    from {
+        transform: scale(1.5) rotateZ(5deg);
         opacity: 0%; 
     }
     to { 
-        transform: scale(1); 
+        transform: scale(1) rotateZ(0deg);
         opacity: 100%; 
     }
 }
 
 @keyframes fade-in {
-    from { 
+    from {
         opacity: 0%; 
     }
     to { 

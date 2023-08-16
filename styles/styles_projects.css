@@ -30,7 +30,7 @@ a {
 
 .project-listings {
     position: fixed;
-    bottom: 0;
+    bottom: 50px;
     left: 50;
     padding-left: 25px;
     color: white;
@@ -38,8 +38,8 @@ a {
 
 .project-title {
     font-family: "baukastenBold";
-    font-size: 50px;
-    margin-top: -50px;
+    font-size: 3rem;
+    margin: auto;
 
     transition: opacity 0.25s;
     transition: mix-blend-mode 0.25;
@@ -72,4 +72,10 @@ a {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+}
+
+@media screen and (max-width: 30rem){
+    .project-title {
+        font-size: 1.5rem;
+    }
 }

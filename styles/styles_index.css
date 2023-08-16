@@ -63,8 +63,8 @@ svg {
 
 .buttons {
     display: flex; /* Use flexbox to horizontally align the buttons */
+    flex-direction: row;
     justify-content: center; /* Center the buttons horizontally */
-    /* whitespace */
 }
 
 .button {
@@ -89,6 +89,22 @@ svg {
 
     transform: scale(1.1);
     size: 100px;
+}
+
+@media screen and (max-width: 45rem){
+    .company-name-red, .company-name-white {
+        font-size: 1.5rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons > * {
+        max-width: 50px;
+    }
 }
 
 @keyframes fadeIn {

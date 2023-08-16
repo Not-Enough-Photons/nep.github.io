@@ -197,7 +197,7 @@
     height: 100%;
 }
 
-.gallery-image-container {
+.gallery-image {
     size: 100px;
     overflow: hidden;
 
@@ -206,7 +206,7 @@
     cursor: pointer;
 }
 
-.gallery-image-container > img {
+.gallery-image > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -216,13 +216,13 @@
     animation-fill-mode: forwards;
 }
 
-.gallery-image-container > img:hover {
+.gallery-image > img:hover {
     animation-name: zoom-out;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
-.gallery-image-container > p {
+.gallery-image > p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,6 +304,13 @@
     position: absolute;
     bottom: 5%;
     left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .gallery-image-view {
+        width: 640;
+        height: 480;
+    }   
 }
 
 @keyframes zoom-in {

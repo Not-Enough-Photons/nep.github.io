@@ -10,7 +10,16 @@ a {
 }
 
 .back-button {
-    display: inline-block;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    z-index: 2;
+
+    top: 10px;
+
     padding: 5px 15px;
     margin: 15px;
     background-color: #ffffff;
@@ -24,8 +33,17 @@ a {
 .back-text {
     font-weight: bold;
     font-family: "baukastenBook";
+
     color: black;
     text-decoration: none;
+}
+
+/* Hover effect for buttons (Optional) */
+.back-button:hover {
+    box-shadow: 0 0 15px rgba(210, 216, 210, 0.5);
+
+    transform: scale(1.1);
+    size: 100px;
 }
 
 .project-listings {

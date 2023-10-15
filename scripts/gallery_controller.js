@@ -40,7 +40,7 @@ function galleryController_init() {
 
 function onClickElement(element) {
     galleryView.style.display = "block";
-    galleryView.style.zIndex = 1;
+    galleryView.style.zIndex = 5;
 
     setMaxElements(imageElements.length);
     setIndex(element.index);

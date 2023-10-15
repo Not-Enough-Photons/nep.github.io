@@ -12,7 +12,7 @@ class ImageElement {
 
 var galleryView = document.querySelector(".gallery-image-view");
 var galleryGrid = document.querySelector(".gallery-view-container")
-var galleryElements = document.querySelectorAll(".gallery-image-container");
+var galleryElements = document.querySelectorAll(".gallery-image");
 
 var previousImageButton = document.querySelector(".backButton");
 var nextImageButton = document.querySelector(".nextButton");
@@ -24,18 +24,13 @@ galleryController_init();
 
 function galleryController_init() {
     galleryElements.forEach((element) => {
-        var imgType = element.querySelector("img");
-        var iframeType = element.querySelector("iframe");
+        var image = element.querySelector('img');
 
-        if(imgType != null) {
-            var imageElement = new ImageElement(imgType.src, localIndex++, imgType);
+        if(image != null)
+        {
+            var imageElement = new ImageElement(image.src, localIndex++, image);
             imageElements.push(imageElement);
         }
-        else if(iframeType != null) {
-            var imageElement = new ImageElement(iframeType, localIndex++, iframeType);
-            imageElements.push(imageElement);
-        }
-        
     });
     
     imageElements.forEach((imageElement) => imageElement.node.addEventListener("click", function(event) {

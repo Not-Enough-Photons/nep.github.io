@@ -2,6 +2,7 @@ const elements = document.querySelectorAll('#project-parent p#project-button spa
 
 const projectVideos = {
     "Hitmarkers": "./webm/project_hitmarkers.webm",
+    "DOOMLAB" : "./webm/project_doomlab.webm",
     "Scoreworks": "./webm/project_scoreworks.webm",
     "Paranoia": "./webm/project_paranoia.webm",
     "MonoDirector": "./webm/project_monodirector.webm",

@@ -2,10 +2,13 @@
 
 body {
     overflow: hidden;
+    background-color: black;
 }
 
 .main {
-    z-index: -1;
+    animation: body-load forwards 6s cubic-bezier(0.16, 1, 0.3, 1);
+
+    filter: blur(10px);
     position: absolute;
     overflow: hidden;
 
@@ -98,5 +101,16 @@ body {
     }
     to {
         filter: blur(0px);
+    }
+}
+
+@keyframes body-load {
+    from {
+        filter: blur(10px);
+        opacity: 0%;
+    }
+    to {
+        filter: blur(0px);
+        opacity: 100%
     }
 }

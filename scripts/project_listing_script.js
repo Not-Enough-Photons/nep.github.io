@@ -8,6 +8,7 @@ const projectVideos = {
     "Paranoia": "./webm/project_paranoia.webm",
     "MonoDirector": "./webm/project_monodirector.webm",
     "Thrusters": "./webm/project_thrusters.webm",
+    "Doors Of Gore": "./webm/game_doorsofgore.webm",
     "Smiler": "./webm/game_smiler.webm",
     "Light Night": "./webm/game_lightnight.webm",
     "Hide And Seek": "./webm/game_hideandseek.webm"

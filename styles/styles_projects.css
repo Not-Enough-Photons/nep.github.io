@@ -63,6 +63,7 @@ a {
     transition: mix-blend-mode 0.25;
     
     cursor: pointer;
+    animation: project-move-in forwards 4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-title:hover {
@@ -74,6 +75,8 @@ a {
     margin: 0;
     padding: 0;
     height: 100%;
+
+    animation: project-video-fade-in forwards 4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .release-footnote {
@@ -96,6 +99,25 @@ a {
     .project-title {
         font-size: 1.5rem;
     }
+}
+
+@keyframes project-move-in {
+    from {
+        opacity: 0%;
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes project-video-fade-in {
+    from {
+        transform: scale(1.5, 1.5);
+        opacity: 0%;
+        filter: blur(25px);
+    }
+    to { }
 }
 
 @keyframes project-text-fade-out {

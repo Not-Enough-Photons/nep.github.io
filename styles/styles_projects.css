@@ -117,7 +117,11 @@ a {
         opacity: 0%;
         filter: blur(25px);
     }
-    to { }
+    to {
+        opacity: 100%;
+        filter: blur(0px);
+        transform: scale(1.0, 1.0);
+    }
 }
 
 @keyframes project-text-fade-out {

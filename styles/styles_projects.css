@@ -76,7 +76,7 @@ a {
     padding: 0;
     height: 100%;
 
-    animation: project-video-fade-in forwards 4s cubic-bezier(0.16, 1, 0.3, 1);
+    /* animation: project-video-fade-in forwards 4s cubic-bezier(0.16, 1, 0.3, 1); */ */
 }
 
 .release-footnote {
@@ -115,7 +115,6 @@ a {
     from {
         transform: scale(1.5, 1.5);
         opacity: 0%;
-        filter: blur(25px);
     }
     to {
         opacity: 100%;

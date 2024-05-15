@@ -1,4 +1,3 @@
-const elements = document.querySelectorAll('#project-parent p#project-button span#project-name');
 
 var request = new Request("https://raw.githubusercontent.com/Not-Enough-Photons/nep.github.io/main/project_information.json");
 
@@ -12,20 +11,35 @@ fetch(request)
         }
     });
 
+function onHover(event) {
+    const background = document.getElementById("video-background"); // jommi
+
+    currentVideo = projectVideos[event.target.textContent];
+
+    if (activeVideo == currentVideo) { //yes i am stinki uuu
+        return;
+    }
+
+    background.src = currentVideo;
+    background.load();
+
+    activeVideo = currentVideo;
+}
+
 function onDataLoaded(json) {
     const projectElements = document.querySelectorAll('#project-parent > ln > a');
 
-    let mods = [];
-    let games = [];
     const target = document.querySelector("#project-parent>ln");
     target.innerHTML = "";
 
+    var isGame = window.location.href.indexOf("games") > -1;
+
     for (const key in json) {
-        if (key.startsWith("game_")) {
+        if (key.startsWith("game_") && isGame) {
             let gameRoot = json[key];
             let gameName = gameRoot["projectName"];
             let gameRelease = gameRoot["projectRelease"];
-            var content = `<a href="__internalLink__">
+            var content = `<a href="games/${key}.html">
                 <p class="project-title" id="project-button">
                     <span id="project-name">${gameName}</span>
                     <span class="release-footnote">${gameRelease}</span>
@@ -33,17 +47,33 @@ function onDataLoaded(json) {
                 </a>`
             target.innerHTML += content;
         }
-        else if (key.startsWith("mod_")) {
-            var text = document.createTextNode(`'<a href="__internalLink__"><p class="project-title" id="project-button"><span id="project-name">__projectName__</span><span class="release-footnote">__releaseDate__ - </span></p></a>"'`);
+        else if (key.startsWith("mod_") && !isGame) {
+            let modRoot = json[key];
+            let modName = modRoot["projectName"];
+            let modRelease = modRoot["projectRelease"];
+            let modBase = modRoot["Game"];
+            var content = `<a href="mods/${key}.html">
+                <p class="project-title" id="project-button">
+                    <span id="project-name">${modName}</span>
+                    <span class="release-footnote">${modBase} - (${modRelease})</span>
+                    </p>
+                </a>`
+            target.innerHTML += content;
         }
+
+        const elements = document.querySelectorAll('#project-parent p#project-button span#project-name');
+
+        elements.forEach((element) => {
+            element.addEventListener('mouseover', onHover);
+        });
     }
 }
 
 
 const projectVideos = {
-    "MagPerception" : "./webm/project_magperception.webm",
+    "MagPerception": "./webm/project_magperception.webm",
     "Hitmarkers": "./webm/project_hitmarkers.webm",
-    "DOOMLAB" : "./webm/project_doomlab.webm",
+    "DOOMLAB": "./webm/project_doomlab.webm",
     "Scoreworks": "./webm/project_scoreworks.webm",
     "Paranoia": "./webm/project_paranoia.webm",
     "MonoDirector": "./webm/project_monodirector.webm",
@@ -59,22 +89,3 @@ scrollbar.scrollIntoView();
 
 var currentVideo = "";
 var activeVideo = ""; //i am fot mm jos 
-
-function onHover(event) {
-    const background = document.getElementById("video-background"); // jommi
-    
-    currentVideo = projectVideos[event.target.textContent];
-
-    if(activeVideo == currentVideo) { //yes i am stinki uuu
-        return;
-    }
-
-    background.src = currentVideo;
-    background.load();
-    
-    activeVideo = currentVideo;
-}
-
-elements.forEach((element) => {
-    element.addEventListener('mouseover', onHover);
-});

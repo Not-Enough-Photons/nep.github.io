@@ -51,7 +51,7 @@ function onDataLoaded(json) {
             let modRoot = json[key];
             let modName = modRoot["projectName"];
             let modRelease = modRoot["projectRelease"];
-            let modBase = modRoot["Game"];
+            let modBase = modRoot["projectGame"];
             var content = `<a href="mods/${key}.html">
                 <p class="project-title" id="project-button">
                     <span id="project-name">${modName}</span>

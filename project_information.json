@@ -1,7 +1,4 @@
 {
-    "mod_freakybob" : {
-        "projectName" : "Freaky Bob"
-    },
     "mod_monodirector" : {
         "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_monodirector.png",
         "projectName" : "MonoDirector",

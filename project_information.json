@@ -13,6 +13,21 @@
         ],
         "description" : "MonoDirector is BONELAB's first movie production mod. It first started out as a camera utility for BONEWORKS.\nIts features were limited at the time, and some of those have been used to make a couple of trailers for BONEWORKS mods.\nNow, it has been shaped to become an all-in-one video creation utility. Record your favorite scene from your show or movie, or make something original. Make a shoot-out, a brawl, a race, anything. MonoDirector makes it possible."
     },
+    "mod_doomlab" : {
+        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_doomlab.png",
+        "projectName" : "DOOMLAB",
+        "projectRelease" : "2023",
+        "projectGame" : "BONELAB",
+        "projectPlatform" : "Valve Index, Quest 2",
+        "gallery" : [
+            "https://notenoughphotons.dev/img/gallery/mods/doomlab/gallery1.png",
+            "https://notenoughphotons.dev/img/gallery/mods/doomlab/gallery2.jpg",
+            "https://notenoughphotons.dev/img/gallery/mods/doomlab/gallery3.jpg",
+            "https://notenoughphotons.dev/img/gallery/mods/doomlab/gallery4.jpg",
+            "https://notenoughphotons.dev/img/gallery/mods/doomlab/gallery5.png"
+        ],
+        "description" : "The demons of Hell have encroached the land of MythOS, and there is only one man who can stop them. You. Fight the endless onslaught of demons in BONELAB, and put an end to the hell spawn."
+    },
     "mod_hitmarkers" : {
         "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_hitmarkers.png",
         "projectName" : "Hitmarkers",
@@ -49,10 +64,18 @@
         "gallery": null,
         "description": "A mod that lets you attach thrusters to anything. Make planes, rockets, jetpacks, and more!"
     },
+    "game_doorsofgore" : {
+        "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_doorsofgore.png",
+        "projectName" : "Doors Of Gore",
+        "projectRelease" : "2023",
+        "projectPlatform" : "PC",
+        "gallery": null,
+        "description": "After signing away your debt, you play as an unwilling participant in a body-horror game show. Endure odds stacked against you as you lay hopelessly tied to a chair, picking doors that may not be as bad as the others."
+    },
     "game_smiler" : {
         "projectBanner" : "https://notenoughphotons.dev/img/titlecards/titlecard_smiler.png",
         "projectName": "Smiler",
-        "projectRelease": "2023 TBD",
+        "projectRelease": "2024 TBD",
         "projectPlatform": "PC, Mac, Linux",
         "gallery": null,
         "description" : "In 1996, hundreds of file systems were compromised by a playful virtual force. Play along with a joyous data criminal, and hope that you can get all of your files back."        

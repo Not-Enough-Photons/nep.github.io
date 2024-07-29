@@ -27,7 +27,7 @@ body {
 }
 
 .logo > p {
-    margin: 0;
+    margin: auto;
     font-family: "baukastenBold";
     font-size: 3.5rem;
     color: white;

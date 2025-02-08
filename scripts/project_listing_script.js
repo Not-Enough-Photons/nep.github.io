@@ -12,11 +12,11 @@ fetch(request)
     });
 
 function onHover(event) {
-    const background = document.getElementById("video-background"); // jommi
+    const background = document.getElementById("video-background");
 
     currentVideo = projectVideos[event.target.textContent];
 
-    if (activeVideo == currentVideo) { //yes i am stinki uuu
+    if (activeVideo == currentVideo) {
         return;
     }
 
@@ -26,16 +26,35 @@ function onHover(event) {
     activeVideo = currentVideo;
 }
 
+function getPageType() {
+    var pageType = 0;
+
+    if (window.location.href.indexOf("mods") > -1)
+    {
+        pageType = 0;
+    }
+    else if (window.location.href.indexOf("games") > -1)
+    {
+        pageType = 1;
+    }
+    else if (window.location.href.indexOf("projects"))
+    {
+        pageType = 2;
+    }
+
+    return pageType;
+}
+
 function onDataLoaded(json) {
     const projectElements = document.querySelectorAll('#project-parent > ln > a');
 
     const target = document.querySelector("#project-parent>ln");
     target.innerHTML = "";
 
-    var isGame = window.location.href.indexOf("games") > -1;
-
     for (const key in json) {
-        if (key.startsWith("game_") && isGame) {
+        console.log(key)
+
+        if (key.startsWith("game_")) {
             let gameRoot = json[key];
             let gameName = gameRoot["projectName"];
             let gameRelease = gameRoot["projectRelease"];
@@ -47,7 +66,7 @@ function onDataLoaded(json) {
                 </a>`
             target.innerHTML += content;
         }
-        else if (key.startsWith("mod_") && !isGame) {
+        else if (key.startsWith("mod_")) {
             let modRoot = json[key];
             let modName = modRoot["projectName"];
             let modRelease = modRoot["projectRelease"];
@@ -56,6 +75,20 @@ function onDataLoaded(json) {
                 <p class="project-title" id="project-button">
                     <span id="project-name">${modName}</span>
                     <span class="release-footnote">${modBase} - (${modRelease})</span>
+                    </p>
+                </a>`
+            target.innerHTML += content;
+        }
+        else if (key.startsWith("project_"))
+        {
+            let projectRoot = json[key];
+            let projectName = projectRoot["projectName"];
+            let projectRelesae = projectRoot["projectRelease"];
+            let projectBase = projectRoot["projectGame"];
+            var content = `<a href="mods/${key}.html">
+                <p class="project-title" id="project-button">
+                    <span id="project-name">${projectBase}</span>
+                    <span class="release-footnote">${projectBase} - (${projectRelesae})</span>
                     </p>
                 </a>`
             target.innerHTML += content;
@@ -84,8 +117,8 @@ const projectVideos = {
     "Hide And Seek": "./webm/game_hideandseek.webm"
 };
 
-const scrollbar = document.querySelector("div.project-listings"); //i lobster my bf
+const scrollbar = document.querySelector("div.project-listings");
 scrollbar.scrollIntoView();
 
 var currentVideo = "";
-var activeVideo = ""; //i am fot mm jos 
+var activeVideo = "";

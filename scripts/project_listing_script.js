@@ -29,76 +29,71 @@ function onHover(event) {
 function getPageType() {
     var pageType = 0;
 
-    if (window.location.href.indexOf("mods") > -1)
-    {
+    if (window.location.href.indexOf("mods") > -1) {
         pageType = 0;
     }
-    else if (window.location.href.indexOf("games") > -1)
-    {
+    else if (window.location.href.indexOf("games") > -1) {
         pageType = 1;
     }
-    else if (window.location.href.indexOf("projects"))
-    {
+    else if (window.location.href.indexOf("projects") > -1) {
         pageType = 2;
     }
 
     return pageType;
 }
 
-function onDataLoaded(json) {
-    const projectElements = document.querySelectorAll('#project-parent > ln > a');
-
+function renderPage(obj) {
     const target = document.querySelector("#project-parent>ln");
     target.innerHTML = "";
 
-    for (const key in json) {
-        console.log(key)
+    for (let i = 0; i < Object.keys(obj).length; i++) {
+        let curElement = obj[i];
 
-        if (key.startsWith("game_")) {
-            let gameRoot = json[key];
-            let gameName = gameRoot["projectName"];
-            let gameRelease = gameRoot["projectRelease"];
-            var content = `<a href="games/${key}.html">
-                <p class="project-title" id="project-button">
-                    <span id="project-name">${gameName}</span>
-                    <span class="release-footnote">${gameRelease}</span>
-                    </p>
-                </a>`
-            target.innerHTML += content;
-        }
-        else if (key.startsWith("mod_")) {
-            let modRoot = json[key];
-            let modName = modRoot["projectName"];
-            let modRelease = modRoot["projectRelease"];
-            let modBase = modRoot["projectGame"];
-            var content = `<a href="mods/${key}.html">
-                <p class="project-title" id="project-button">
-                    <span id="project-name">${modName}</span>
-                    <span class="release-footnote">${modBase} - (${modRelease})</span>
-                    </p>
-                </a>`
-            target.innerHTML += content;
-        }
-        else if (key.startsWith("project_"))
+        let redirect = curElement["projectRedirect"];
+        let name = curElement["projectName"];
+        let release = curElement["projectRelease"];
+        let base = curElement["projectGame"];
+        let releaseWindow = `${base} - (${release})`
+
+        console.log(redirect);
+
+        if (name == null)
         {
-            let projectRoot = json[key];
-            let projectName = projectRoot["projectName"];
-            let projectRelesae = projectRoot["projectRelease"];
-            let projectBase = projectRoot["projectGame"];
-            var content = `<a href="mods/${key}.html">
-                <p class="project-title" id="project-button">
-                    <span id="project-name">${projectBase}</span>
-                    <span class="release-footnote">${projectBase} - (${projectRelesae})</span>
-                    </p>
-                </a>`
-            target.innerHTML += content;
+            continue;
         }
+
+        if (base == null)
+        {
+            releaseWindow = release != null ? `${release}` : "";
+        }
+
+        var content = `<a href="mods/${redirect}.html">
+            <p class="project-title" id="project-button">
+                <span id="project-name">${name}</span>
+                <span class="release-footnote">${releaseWindow}</span>
+                </p>
+            </a>`
+        target.innerHTML += content;
 
         const elements = document.querySelectorAll('#project-parent p#project-button span#project-name');
 
         elements.forEach((element) => {
             element.addEventListener('mouseover', onHover);
         });
+    }
+}
+
+function onDataLoaded(json) {
+    const projectElements = document.querySelectorAll('#project-parent > ln > a');
+
+    if (getPageType() == 0) {
+        renderPage(json["mods"]);
+    }
+    else if (getPageType() == 1) {
+        renderPage(json["games"]);
+    }
+    else if (getPageType() == 2) {
+        renderPage(json["projects"]);
     }
 }
 

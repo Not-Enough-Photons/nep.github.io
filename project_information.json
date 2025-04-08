@@ -122,7 +122,7 @@
     "projects": [
         {
             "projectRedirect": "project_recom",
-            "projectBanner": "",
+            "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_recom.png",
             "projectName": "reCOM",
             "projectRelease": "TBD",
             "projectPlatform": "PC, Mac, Linux",

@@ -42,7 +42,7 @@ function getPageType() {
     return pageType;
 }
 
-function renderPage(obj) {
+function renderPage(obj, type) {
     const target = document.querySelector("#project-parent>ln");
     target.innerHTML = "";
 
@@ -67,7 +67,7 @@ function renderPage(obj) {
             releaseWindow = release != null ? `${release}` : "";
         }
 
-        var content = `<a href="mods/${redirect}.html">
+        var content = `<a href="${type}/${redirect}.html">
             <p class="project-title" id="project-button">
                 <span id="project-name">${name}</span>
                 <span class="release-footnote">${releaseWindow}</span>
@@ -87,13 +87,13 @@ function onDataLoaded(json) {
     const projectElements = document.querySelectorAll('#project-parent > ln > a');
 
     if (getPageType() == 0) {
-        renderPage(json["mods"]);
+        renderPage(json["mods"], "mods");
     }
     else if (getPageType() == 1) {
-        renderPage(json["games"]);
+        renderPage(json["games"], "games");
     }
     else if (getPageType() == 2) {
-        renderPage(json["projects"]);
+        renderPage(json["projects"], "projects");
     }
 }
 

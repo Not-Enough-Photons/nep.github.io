@@ -1,6 +1,15 @@
 {
     "mods": [
         {
+            "projectRedirect": "mod_nedebug",
+            "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_nedebug.png",
+            "projectName": "NEDebug",
+            "projectRelease": "2025",
+            "projectGame": "BONELAB",
+            "projectPlatform": "Valve Index, Meta Quest",
+            "description": ""
+        },
+        {
             "projectRedirect": "mod_monodirector",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_monodirector.png",
             "projectName": "MonoDirector",

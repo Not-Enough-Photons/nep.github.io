@@ -5,68 +5,56 @@
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_nedebug.png",
             "projectName": "NEDebug",
             "projectRelease": "2025",
-            "projectGame": "BONELAB",
-            "projectPlatform": "Valve Index, Meta Quest"
+            "projectGame": "BONELAB"
         },
         {
             "projectRedirect": "mod_monodirector",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_monodirector.png",
             "projectName": "MonoDirector",
             "projectRelease": "2024 (Open Beta)",
-            "projectGame": "BONELAB",
-            "projectPlatform": "Valve Index"
+            "projectGame": "BONELAB"
         },
         {
             "projectRedirect": "mod_magperception",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_magperception.png",
             "projectName": "MagPerception",
             "projectRelease": "2024",
-            "projectGame": "BONELAB",
-            "projectPlatform": "Valve Index, Quest 2",
+            "projectGame": "BONELAB"
         },
         {
             "projectRedirect": "mod_doomlab",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_doomlab.png",
             "projectName": "DOOMLAB",
             "projectRelease": "2023",
-            "projectGame": "BONELAB",
-            "projectPlatform": "Valve Index, Quest 2",
+            "projectGame": "BONELAB"
         },
         {
             "projectRedirect": "mod_hitmarkers",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_hitmarkers.png",
             "projectName": "Hitmarkers",
             "projectRelease": "2021, 2022, 2023",
-            "projectGame": "BONELAB, BONEWORKS",
-            "projectPlatform": "Valve Index, Quest 2",
-            "gallery": null
+            "projectGame": "BONELAB, BONEWORKS"
         },
         {
             "projectRedirect": "mod_paranoia",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_paranoia.jpg",
             "projectName": "Paranoia",
             "projectRelease": "2021",
-            "projectGame": "BONEWORKS",
-            "projectPlatform": "Valve Index",
-            "gallery": null
+            "projectGame": "BONEWORKS"
         },
         {
             "projectRedirect": "mod_scoreworks",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_scoreworks.jpg",
             "projectName": "Scoreworks",
             "projectRelease": "2021, 2022",
-            "projectGame": "BONEWORKS",
-            "projectPlatform": "Valve Index",
-            "gallery": null
+            "projectGame": "BONEWORKS"
         },
         {
             "projectRedirect": "mod_thrusters",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_thrusters.jpg",
             "projectName": "Thrusters",
             "projectRelease": "2021",
-            "projectGame": "BONEWORKS",
-            "projectPlatform": "Valve Index",
-            "gallery": null
+            "projectGame": "BONEWORKS"
         }
     ],
     "games": [
@@ -74,33 +62,26 @@
             "projectRedirect": "game_doorsofgore",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_doorsofgore.png",
             "projectName": "Doors Of Gore",
-            "projectRelease": "2024",
-            "projectPlatform": "PC",
-            "gallery": null
+            "projectRelease": "2024"
         },
         {
             "projectRedirect": "game_smiler",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_smiler.png",
             "projectName": "Smiler",
-            "projectRelease": "2024 TBD",
-            "projectPlatform": "PC, Mac, Linux",
-            "gallery": null
+            "projectRelease": "2024 TBD"
         },
         {
             "projectRedirect": "game_lightnight",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_lightnight.png",
             "projectName": "Light Night",
             "projectRelease": "2024 TBD",
-            "projectPlatform": "PCVR",
-            "gallery": null
+            "projectPlatform": "PCVR"
         },
         {
             "projectRedirect": "game_hideandseek",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_hideandseek.png",
             "projectName": "Hide And Seek",
-            "projectRelease": "TBD",
-            "projectPlatform": "PC, Mac, Linux",
-            "gallery": null
+            "projectRelease": "TBD"
         }
     ],
     "projects": [
@@ -108,9 +89,7 @@
             "projectRedirect": "project_recom",
             "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_recom.png",
             "projectName": "reCOM",
-            "projectRelease": "TBD",
-            "projectPlatform": "PC, Mac, Linux",
-            "gallery": null,
+            "projectRelease": "TBD"
         }
     ]
 }

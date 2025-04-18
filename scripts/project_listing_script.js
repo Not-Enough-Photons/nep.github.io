@@ -1,5 +1,18 @@
+class Project {
+    name = "";
+    video = "";
+    release = "";
+}
 
 var request = new Request("https://raw.githubusercontent.com/Not-Enough-Photons/nep.github.io/main/project_information.json");
+
+const projects = [];
+
+const TYPE_MOD = 0;
+const TYPE_GAME = 1;
+const TYPE_OTHER = 2;
+
+var pageType = 0;
 
 fetch(request)
     .then((request) => {
@@ -14,7 +27,18 @@ fetch(request)
 function onHover(event) {
     const background = document.getElementById("video-background");
 
-    currentVideo = projectVideos[event.target.textContent];
+    let selected;
+
+    for (let i = 0; i < projects.length; i++)
+    {
+        if (event.target.textContent == projects[i].name)
+        {
+            selected = projects[i];
+            break;
+        }
+    }
+
+    currentVideo = selected.video;
 
     if (activeVideo == currentVideo) {
         return;
@@ -27,7 +51,7 @@ function onHover(event) {
 }
 
 function getPageType() {
-    var pageType = 0;
+    pageType = 0;
 
     if (window.location.href.indexOf("mods") > -1) {
         pageType = 0;
@@ -42,75 +66,67 @@ function getPageType() {
     return pageType;
 }
 
-function renderPage(obj, type) {
+function renderPage() {
+    const length = projects.length;
     const target = document.querySelector("#project-parent>ln");
+
     target.innerHTML = "";
 
-    for (let i = 0; i < Object.keys(obj).length; i++) {
-        let curElement = obj[i];
+    let redirect = "";
 
-        let redirect = curElement["projectRedirect"];
-        let name = curElement["projectName"];
-        let release = curElement["projectRelease"];
-        let base = curElement["projectGame"];
-        let releaseWindow = `${base} - (${release})`
+    for (let i = 0; i < length; i++)
+    {
+        let project = projects[i];
 
-        console.log(redirect);
-
-        if (name == null)
-        {
-            continue;
-        }
-
-        if (base == null)
-        {
-            releaseWindow = release != null ? `${release}` : "";
-        }
-
-        var content = `<a href="${type}/${redirect}.html">
+        var content = `<a href="${pageType}/${redirect}.html">
             <p class="project-title" id="project-button">
-                <span id="project-name">${name}</span>
-                <span class="release-footnote">${releaseWindow}</span>
+                <span id="project-name">${project.name}</span>
+                <span class="release-footnote">${project.release}</span>
                 </p>
             </a>`
+
         target.innerHTML += content;
+    }
 
-        const elements = document.querySelectorAll('#project-parent p#project-button span#project-name');
+    const elements = document.querySelectorAll('#project-parent p#project-button span#project-name');
 
-        elements.forEach((element) => {
-            element.addEventListener('mouseover', onHover);
-        });
+    elements.forEach((element) => {
+        element.addEventListener('mouseover', onHover);
+    });
+}
+
+function initializeProjectData(json) {
+    const length = Object.keys(json).length;
+
+    for (let i = 0; i < length; i++)
+    {
+        let currentKey = json[i];
+        let currentKeyName = Object.keys(currentKey)[0];
+        let currentProject = currentKey[currentKeyName];
+        
+        let data = new Project();
+
+        data.name = currentProject["projectName"];
+        data.video = currentProject["projectVideo"];
+        data.release = currentProject["projectRelease"];
+
+        projects.push(data);
     }
 }
 
 function onDataLoaded(json) {
-    const projectElements = document.querySelectorAll('#project-parent > ln > a');
+    let target = "";
 
-    if (getPageType() == 0) {
-        renderPage(json["mods"], "mods");
-    }
-    else if (getPageType() == 1) {
-        renderPage(json["games"], "games");
-    }
-    else if (getPageType() == 2) {
-        renderPage(json["projects"], "projects");
-    }
+    if (getPageType() == TYPE_MOD)
+        target = "mods";
+    else if (getPageType() == TYPE_GAME)
+        target = "games";
+    else if (getPageType() == TYPE_OTHER)
+        target = "projects";
+    
+    initializeProjectData(json[target]);
+    renderPage();
 }
-
-
-const projectVideos = {
-    "MagPerception": "./webm/project_magperception.webm",
-    "Hitmarkers": "./webm/project_hitmarkers.webm",
-    "DOOMLAB": "./webm/project_doomlab.webm",
-    "Scoreworks": "./webm/project_scoreworks.webm",
-    "Paranoia": "./webm/project_paranoia.webm",
-    "MonoDirector": "./webm/project_monodirector.webm",
-    "Thrusters": "./webm/project_thrusters.webm",
-    "Doors Of Gore": "./webm/game_doorsofgore.webm",
-    "Smiler": "./webm/game_smiler.webm",
-    "Light Night": "./webm/game_lightnight.webm",
-    "Hide And Seek": "./webm/game_hideandseek.webm"
-};
 
 const scrollbar = document.querySelector("div.project-listings");
 scrollbar.scrollIntoView();

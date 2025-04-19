@@ -15,6 +15,28 @@ const TYPE_OTHER = 2;
 
 var pageType = "";
 
+const scroll = document.getElementById("project-parent");
+
+updateScrollGradient();
+
+scroll.addEventListener('scroll', (event) => {
+    updateScrollGradient();
+})
+
+function updateScrollGradient() {
+    let top = scroll.scrollTop;
+    let pos = scroll.scrollHeight - scroll.clientHeight;
+    let value = top / pos;
+
+    const alphaMult = 10.0;
+    let blackFactor = value * alphaMult;
+
+    let y1_top = `rgba(0, 0, 0, ${1 - blackFactor})`;
+    let y2_bottom = `rgba(0, 0, 0, ${blackFactor - 9.25})`
+
+    scroll.style.maskImage = `linear-gradient(${y1_top}, white, ${y2_bottom})`
+}
+
 fetch(request)
     .then((request) => {
         if (request.status == 200) {
@@ -69,7 +91,7 @@ function getPageType() {
 
 function renderPage() {
     const length = projects.length;
-    const target = document.querySelector("#project-parent>ln");
+    const target = document.querySelector("#project-parent");
 
     target.innerHTML = "";
 

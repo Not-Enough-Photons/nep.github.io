@@ -25,9 +25,8 @@ a {
     background-color: #ffffff;
     border-radius: 25px;
 
-     /* Add the subtle glow effect using box-shadow */
-     box-shadow: 0 0 5px rgba(0, 255, 0, 0); /* Start with a transparent glow */
-     transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0);
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 .back-text {
@@ -38,7 +37,6 @@ a {
     text-decoration: none;
 }
 
-/* Hover effect for buttons (Optional) */
 .back-button:hover {
     box-shadow: 0 0 15px rgba(210, 216, 210, 0.5);
 
@@ -47,28 +45,42 @@ a {
 }
 
 .project-listings {
-    position: fixed;
-    bottom: 50px;
-    left: 50;
-    padding-left: 25px;
-    color: white;
+    position: absolute;
+    bottom: 3%;
+    left: 1%;
+    max-height: 50%;
+
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    white-space: nowrap;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-listings::-webkit-scrollbar {
+    display: none;
 }
 
 .project-title {
-    font-family: "baukastenBold";
-    font-size: 3rem;
+    text-align: left;
     margin: auto;
+    color: white;
+    font-family: 'baukastenBold';
+    font-size: 3rem;
 
     transition: opacity 0.25s;
     transition: mix-blend-mode 0.25;
+    transition: font-size 0.1s ease-in-out;
     
     cursor: pointer;
-    animation: project-move-in forwards 4s cubic-bezier(0.16, 1, 0.3, 1);
+    /* animation: project-move-in forwards 4s cubic-bezier(0.16, 1, 0.3, 1);*/
 }
 
 .project-title:hover {
-    opacity: 25%;
-    mix-blend-mode: color-dodge;
+    transition: font-size 0.1s ease-in-out;
+    font-size: 3.5rem
 }
 
 .video-container {

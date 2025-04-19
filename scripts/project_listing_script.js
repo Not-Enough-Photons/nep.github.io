@@ -2,9 +2,10 @@ class Project {
     name = "";
     video = "";
     release = "";
+    redirect = "";
 }
 
-var request = new Request("https://raw.githubusercontent.com/Not-Enough-Photons/nep.github.io/main/project_information.json");
+var request = new Request("https://raw.githubusercontent.com/NotEnoughPhotons/notenoughphotons.dev/main/project_information.json");
 
 const projects = [];
 
@@ -12,7 +13,7 @@ const TYPE_MOD = 0;
 const TYPE_GAME = 1;
 const TYPE_OTHER = 2;
 
-var pageType = 0;
+var pageType = "";
 
 fetch(request)
     .then((request) => {
@@ -51,7 +52,7 @@ function onHover(event) {
 }
 
 function getPageType() {
-    pageType = 0;
+    let pageType = 0;
 
     if (window.location.href.indexOf("mods") > -1) {
         pageType = 0;
@@ -72,13 +73,11 @@ function renderPage() {
 
     target.innerHTML = "";
 
-    let redirect = "";
-
     for (let i = 0; i < length; i++)
     {
         let project = projects[i];
 
-        var content = `<a href="${pageType}/${redirect}.html">
+        var content = `<a href="${pageType}/${project.redirect}.html">
             <p class="project-title" id="project-button">
                 <span id="project-name">${project.name}</span>
                 <span class="release-footnote">${project.release}</span>
@@ -109,22 +108,21 @@ function initializeProjectData(json) {
         data.name = currentProject["projectName"];
         data.video = currentProject["projectVideo"];
         data.release = currentProject["projectRelease"];
+        data.redirect = currentProject["projectRedirect"];
 
         projects.push(data);
     }
 }
 
 function onDataLoaded(json) {
-    let target = "";
-
     if (getPageType() == TYPE_MOD)
-        target = "mods";
+        pageType = "mods";
     else if (getPageType() == TYPE_GAME)
-        target = "games";
+        pageType = "games";
     else if (getPageType() == TYPE_OTHER)
-        target = "projects";
+        pageType = "projects";
     
-    initializeProjectData(json[target]);
+    initializeProjectData(json[pageType]);
     renderPage();
 }
 

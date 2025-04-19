@@ -1,11 +1,17 @@
 @import url("/styles/styles_fonts.css");
 
+:root {
+    --marker-scale: 1;
+    --marker-pos-x: 9.25%;
+    --marker-pos-y: -31.5%;
+}
+
 @keyframes rotate {
     from {
-        transform: translate(-7%, -38.5%) rotate(0deg)
+        transform: translate(var(--marker-pos-x), var(--marker-pos-y)) rotate(0deg) scale(var(--marker-scale))
     }
     to {
-        transform: translate(-7%, -38.5%) rotate(360deg)
+        transform: translate(var(--marker-pos-x), var(--marker-pos-y)) rotate(360deg) scale(var(--marker-scale))
     }
 }
 
@@ -50,12 +56,12 @@ body {
 
 .marker {
     position: absolute;
-    width: 75%;
     z-index: 100;
-    transform: translate(-7%, -38.5%);
     mix-blend-mode: difference;
     animation: rotate 60s linear infinite;
     pointer-events: none;
+    margin: auto;
+    width: 55%;
 }
 
 .logo {
@@ -68,7 +74,8 @@ body {
 
 .hitmarkers-main {
     white-space: nowrap;
-    margin: auto;
+    margin-top: -1rem;
+    margin-bottom: -0.25rem;
     font-size: 5rem;
     font-family: 'baukastenBold';
     color: white;
@@ -78,8 +85,7 @@ body {
 
 .hitmarkers-nep {
     white-space: nowrap;
-    margin: auto;
-    height: 0;
+    margin:auto;
     font-size: 1rem;
     font-family: 'baukastenBold';
     color: white;
@@ -95,9 +101,56 @@ body {
 .hitmarkers-options > a {
     white-space: nowrap;
     margin: auto;
-    height: 5px;
     font-size: 1rem;
     font-family: 'baukastenBold';
     color: white;
     text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .marker {
+        position: absolute;
+        z-index: 100;
+        mix-blend-mode: difference;
+        animation: rotate 60s linear infinite;
+        pointer-events: none;
+        margin: auto;
+        width: 55%;
+    }
+
+    .hitmarkers-main {
+        white-space: nowrap;
+        margin-top: -1rem;
+        margin-bottom: -0.25rem;
+        font-size: 13.5vw;
+        font-family: 'baukastenBold';
+        color: white;
+        font-style: italic;
+        text-shadow: 1px 1px 7.5px white;
+    }
+
+    .hitmarkers-nep {
+        white-space: nowrap;
+        margin-bottom: 0.75vh;
+        font-size: 3vw;
+        font-family: 'baukastenBold';
+        color: white;
+        font-style: italic;
+        transform:translateX(3vw);
+        text-shadow: 1px 1px 7.5px white;
+    }
+
+    .hitmarkers-options {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hitmarkers-options > a {
+        white-space: nowrap;
+        margin: auto;
+        font-size: 1.5rem;
+        font-family: 'baukastenBold';
+        color: white;
+        text-decoration: none;
+    }
 }

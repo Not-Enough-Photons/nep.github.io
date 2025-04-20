@@ -1,6 +1,17 @@
 {
     "mods": [
         {
+            "ScoreLab" :
+            {
+                "projectRedirect": "mod_scorelab",
+                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_scorelab.png",
+                "projectName": "ScoreLab",
+                "projectRelease": "2025",
+                "projectGame": "BONELAB",
+                "projectVideo": null
+            }
+        },
+        {
             "NEDebug" :
             {
                 "projectRedirect": "mod_nedebug",

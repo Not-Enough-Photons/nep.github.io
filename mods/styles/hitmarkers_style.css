@@ -15,8 +15,27 @@
     }
 }
 
+@keyframes marker-animate {
+    0% {
+        opacity: 0%;
+        transform: rotate(-45deg) scale(0%);
+    }
+    45% {
+        opacity: 100%;
+        transform: rotate(90deg) scale(35%);
+    }
+    100% {
+        opacity: 0%;
+        transform: rotate(90deg) scale(75%);
+    }
+}
+
 body {
     background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    overflow: hidden;
 }
 
 .back-button {
@@ -35,8 +54,8 @@ body {
     background-color: #ffffff;
     border-radius: 25px;
 
-     box-shadow: 0 0 5px rgba(0, 255, 0, 0);
-     transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0);
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 .back-text {
@@ -45,6 +64,7 @@ body {
 
     color: black;
     text-decoration: none;
+    user-select: none;
 }
 
 .back-button:hover {
@@ -62,6 +82,16 @@ body {
     pointer-events: none;
     margin: auto;
     width: 55%;
+}
+
+.gen-marker {
+    position: absolute;
+    margin: auto;
+    opacity: 0%;
+    animation: marker-animate 0.85s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation-composition: add;
+    pointer-events: none;
+    user-select: none;
 }
 
 .logo {
@@ -105,6 +135,10 @@ body {
     font-family: 'baukastenBold';
     color: white;
     text-decoration: none;
+}
+
+.hitmarkers-options > a:hover {
+    text-shadow: 1px 1px 7.5px white;
 }
 
 @media screen and (max-width: 600px) {

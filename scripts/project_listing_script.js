@@ -134,7 +134,7 @@ function renderPage() {
         let project = projects[i];
 
         const linkElement = document.createElement('a');
-        linkElement.href = project.notSetup ? `${pageType}/${project.redirect}.html` : `${project.redirect}.html`;
+        linkElement.href = project.setup ? `${pageType}/${project.redirect}.html` : `${project.redirect}.html`;
 
         const projectTitle = document.createElement('p');
         projectTitle.className = 'project-title';

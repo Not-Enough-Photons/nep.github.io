@@ -3,6 +3,39 @@ class Project {
     video = "";
     release = "";
     redirect = "";
+    setup = false;
+
+    setName(name) {
+        this.name = name;
+    }
+
+    setVideo(video) {
+        this.video = video;
+    }
+
+    setRelease(release) {
+        if (release != null)
+        {
+            this.release = release;
+        }
+        else
+        {
+            this.release = "TBD";
+        }
+    }
+
+    setRedirect(redirect) {
+        if (redirect != null || redirect != undefined) 
+        {
+            this.redirect = redirect;
+            this.setup = true;
+        }
+        else
+        {
+            this.redirect = "404";
+            this.setup = false;
+        }
+    }
 }
 
 var request = new Request("https://raw.githubusercontent.com/NotEnoughPhotons/notenoughphotons.dev/main/project_information.json");
@@ -93,20 +126,33 @@ function renderPage() {
     const length = projects.length;
     const target = document.querySelector("#project-parent");
 
+    // Ensure that all children are cleared out
     target.innerHTML = "";
 
     for (let i = 0; i < length; i++)
     {
         let project = projects[i];
 
-        var content = `<a href="${pageType}/${project.redirect}.html">
-            <p class="project-title" id="project-button">
-                <span id="project-name">${project.name}</span>
-                <span class="release-footnote">${project.release}</span>
-                </p>
-            </a>`
+        const linkElement = document.createElement('a');
+        linkElement.href = project.notSetup ? `${pageType}/${project.redirect}.html` : `${project.redirect}.html`;
 
-        target.innerHTML += content;
+        const projectTitle = document.createElement('p');
+        projectTitle.className = 'project-title';
+        projectTitle.id = 'project-button';
+
+        const projectNameSpan = document.createElement('span');
+        projectNameSpan.id = 'project-name';
+        projectNameSpan.innerHTML = project.name;
+
+        const projectReleaseSpan = document.createElement('span');
+        projectReleaseSpan.className = 'release-footnote';
+        projectReleaseSpan.innerHTML = project.release;
+
+        linkElement.appendChild(projectTitle);
+        projectTitle.appendChild(projectNameSpan);
+        projectTitle.appendChild(projectReleaseSpan);
+
+        target.appendChild(linkElement);
     }
 
     const elements = document.querySelectorAll('#project-parent p#project-button span#project-name');
@@ -127,10 +173,10 @@ function initializeProjectData(json) {
         
         let data = new Project();
 
-        data.name = currentProject["projectName"];
-        data.video = currentProject["projectVideo"];
-        data.release = currentProject["projectRelease"];
-        data.redirect = currentProject["projectRedirect"];
+        data.setName(currentProject["projectName"]);
+        data.setVideo(currentProject["projectVideo"]);
+        data.setRelease(currentProject["projectRelease"]);
+        data.setRedirect(currentProject["projectRedirect"]);
 
         projects.push(data);
     }

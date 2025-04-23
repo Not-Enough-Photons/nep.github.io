@@ -24,6 +24,12 @@ class Project {
     }
 
     setRedirect(redirect) {
+        if (redirect == undefined)
+        {
+            this.redirect = "404";
+            return;
+        }
+
         this.redirect = redirect;
     }
 }

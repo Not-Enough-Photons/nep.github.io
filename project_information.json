@@ -3,7 +3,6 @@
         {
             "ScoreLab" :
             {
-                "projectRedirect": "mod_scorelab",
                 "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_scorelab.png",
                 "projectName": "ScoreLab",
                 "projectRelease": "2025",
@@ -14,7 +13,6 @@
         {
             "NEDebug" :
             {
-                "projectRedirect": "mod_nedebug",
                 "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_nedebug.png",
                 "projectName": "NEDebug",
                 "projectRelease": "2025",

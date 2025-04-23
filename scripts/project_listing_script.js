@@ -3,6 +3,7 @@ class Project {
     video = "";
     release = "";
     redirect = "";
+    setup = false;
 
     setName(name) {
         this.name = name;
@@ -24,13 +25,16 @@ class Project {
     }
 
     setRedirect(redirect) {
-        if (redirect == undefined)
+        if (redirect != null || redirect != undefined) 
+        {
+            this.redirect = redirect;
+            this.setup = true;
+        }
+        else
         {
             this.redirect = "404";
-            return;
+            this.setup = false;
         }
-
-        this.redirect = redirect;
     }
 }
 
@@ -130,7 +134,7 @@ function renderPage() {
         let project = projects[i];
 
         const linkElement = document.createElement('a');
-        linkElement.href = `${pageType}/${project.redirect}.html`;
+        linkElement.href = project.notSetup ? `${pageType}/${project.redirect}.html` : `${project.redirect}.html`;
 
         const projectTitle = document.createElement('p');
         projectTitle.className = 'project-title';

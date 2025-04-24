@@ -1,0 +1,107 @@
+@import url('/styles/styles_fonts.css');
+
+:root {
+    --nedebug-box-width: 500px;
+    --nedebug-box-height: 200px;
+    --nedebug-box-length: 100px;
+    --nedebug-box-inset: 50px;
+}
+
+@keyframes scene-change {
+    from {
+        opacity: 0%;
+        perspective: 1px;
+    }
+    to {
+        opacity: 100%;
+        perspective: 150px;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate3d(100px, 0, 500px) rotate3d(-1, 1, 1, 360deg);
+    }
+    100% {
+        transform: translate3d(100px, 0, 0px) rotate3d(0, 1, 0, 0deg);
+    }
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+div.scene-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-66.6%, -50%);
+    animation: scene-change 5s cubic-bezier(0.19, 1, 0.22, 1);
+    perspective: 150px;
+    perspective-origin: 350px 100px;
+    opacity: 100%;
+}
+
+div.scene-logo > .box {
+    width: 500px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation-composition: add;
+    animation: rotate 2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.box > * {
+    position: absolute;
+    border-color: red;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: dashed;
+}
+
+.box > .front, .back {
+    width: var(--nedebug-box-width);
+    height: var(--nedebug-box-height);
+}
+
+.box > .right, .left {
+    width: var(--nedebug-box-length);
+    height: var(--nedebug-box-height);
+    left: var(--nedebug-box-length);
+}
+
+.box > .top, .bottom {
+    width: var(--nedebug-box-width);
+    height: var(--nedebug-box-length);
+    top: 50px;
+}
+
+.front  { transform: rotateY(  0deg) translateZ( 50px); }
+.back   { transform: rotateY(180deg) translateZ( 50px); }
+
+.right  { display:none; transform: rotateY( 90deg) translateZ(350px); }
+.left   { display:none; transform: rotateY(-90deg) translateZ(150px); }
+
+.top    { transform: rotateX( 90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+.box > .title {
+    border-style: none;
+}
+
+.box > .title > .subtitle {
+    font-size: 25px;
+    letter-spacing: -0.1rem;
+    transform: translate(21px, 25px);
+}
+
+.box > .title > p {
+    margin:auto;
+    color: white;
+    font-family: "BaukastenBold";
+    font-size: 100px;
+    letter-spacing: -0.3rem;
+    text-shadow: 0px 0px 20px rgba(192, 35, 35, 0.375);
+    transform-style: preserve-3d;
+    transform: translate(15px, 45px);
+}

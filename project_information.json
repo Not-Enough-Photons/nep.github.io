@@ -13,6 +13,7 @@
         {
             "NEDebug" :
             {
+                "projectRedirect": "mod_nedebug",
                 "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_nedebug.png",
                 "projectName": "NEDebug",
                 "projectRelease": "2025",

@@ -6,6 +6,10 @@ p {
     font-size: 2rem;
 }
 
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+
 .background {
     margin: 0;
     padding: 0;

@@ -3,6 +3,7 @@ class Project {
     video = "";
     release = "";
     redirect = "";
+    banner = "";
     setup = false;
 
     setName(name) {
@@ -36,6 +37,10 @@ class Project {
             this.setup = false;
         }
     }
+
+    setBanner(banner) {
+        this.banner = banner;
+    }
 }
 
 var request = new Request("/project_information.json");
@@ -49,6 +54,8 @@ const TYPE_OTHER = 2;
 var pageType = "";
 
 const scroll = document.getElementById("project-parent");
+var videoBackground = document.getElementById('video-background');
+var bannerBackground = document.getElementById('banner-background');
 
 updateScrollGradient();
 
@@ -81,8 +88,6 @@ fetch(request)
     });
 
 function onHover(event) {
-    const background = document.getElementById("video-background");
-
     let selected;
 
     for (let i = 0; i < projects.length; i++)
@@ -94,16 +99,37 @@ function onHover(event) {
         }
     }
 
-    currentVideo = selected.video;
+    if (selected.video != null) {
+        videoBackground.style.opacity = 100;
+        bannerBackground.style.opacity = 0;
+        setVideo(selected.video);
+    } else {
+        videoBackground.style.opacity = 0;
+        bannerBackground.style.opacity = 100;
+        setBanner(selected.banner);
+    }
+}
+
+function setVideo(video) {
+    currentVideo = video;
 
     if (activeVideo == currentVideo) {
         return;
     }
 
-    background.src = currentVideo;
-    background.load();
-
+    videoBackground.src = currentVideo;
     activeVideo = currentVideo;
+}
+
+function setBanner(banner) {
+    currentBanner = banner;
+
+    if (activeBanner == currentBanner) {
+        return;
+    }
+
+    bannerBackground.src = currentBanner;
+    activeBanner = currentBanner;
 }
 
 function getPageType() {
@@ -160,6 +186,16 @@ function renderPage() {
     elements.forEach((element) => {
         element.addEventListener('mouseover', onHover);
     });
+
+    if (projects[0].video != null) {
+        videoBackground.style.opacity = 100;
+        bannerBackground.style.display = 0;
+        setVideo(projects[0].video);
+    } else {
+        videoBackground.style.display = 0;
+        bannerBackground.style.display = 100;
+        setBanner(projects[0].banner);
+    }
 }
 
 function initializeProjectData(json) {
@@ -173,10 +209,11 @@ function initializeProjectData(json) {
         
         let data = new Project();
 
-        data.setName(currentProject["projectName"]);
+        data.setName(currentKeyName);
         data.setVideo(currentProject["projectVideo"]);
         data.setRelease(currentProject["projectRelease"]);
         data.setRedirect(currentProject["projectRedirect"]);
+        data.setBanner(currentProject["projectBanner"]);
 
         projects.push(data);
     }
@@ -199,3 +236,6 @@ scrollbar.scrollIntoView();
 
 var currentVideo = "";
 var activeVideo = "";
+
+var currentBanner = "";
+var activeBanner = "";

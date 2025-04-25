@@ -1,4 +1,5 @@
 @import url('/styles/styles_fonts.css');
+@import url('/styles/styles_common.css');
 
 :root {
     --nedebug-box-width: 500px;

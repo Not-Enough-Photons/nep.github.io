@@ -38,7 +38,7 @@ class Project {
     }
 }
 
-var request = new Request("https://raw.githubusercontent.com/NotEnoughPhotons/notenoughphotons.dev/main/project_information.json");
+var request = new Request("/project_information.json");
 
 const projects = [];
 

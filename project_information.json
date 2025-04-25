@@ -3,18 +3,18 @@
         {
             "ScoreLab" :
             {
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_scorelab.png",
+                "projectBanner": "img/titlecards/titlecard_scorelab.png",
                 "projectName": "ScoreLab",
                 "projectRelease": "2025",
                 "projectGame": "BONELAB",
-                "projectVideo": null
+                "projectVideo": "webm/project_scorelab.webm"
             }
         },
         {
             "NEDebug" :
             {
                 "projectRedirect": "mod_nedebug",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_nedebug.png",
+                "projectBanner": "img/titlecards/titlecard_nedebug.png",
                 "projectName": "NEDebug",
                 "projectRelease": "2025",
                 "projectGame": "BONELAB",
@@ -25,77 +25,77 @@
             "MonoDirector" :
             {
                 "projectRedirect": "mod_monodirector",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_monodirector.png",
+                "projectBanner": "img/titlecards/titlecard_monodirector.png",
                 "projectName": "MonoDirector",
                 "projectRelease": "2024 (Open Beta)",
                 "projectGame": "BONELAB",
-                "projectVideo": "https://notenoughphotons.dev/webm/project_monodirector.webm"
+                "projectVideo": "webm/project_monodirector.webm"
             }
         },
         {
             "MagPerception" :
             {
                 "projectRedirect": "mod_magperception",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_magperception.png",
+                "projectBanner": "img/titlecards/titlecard_magperception.png",
                 "projectName": "MagPerception",
                 "projectRelease": "2024",
                 "projectGame": "BONELAB",
-                "projectVideo": "https://notenoughphotons.dev/webm/project_magperception.webm"                    
+                "projectVideo": "webm/project_magperception.webm"                    
             }
         },
         {
             "DOOMLAB":
             {
                 "projectRedirect": "mod_doomlab",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_doomlab.png",
+                "projectBanner": "img/titlecards/titlecard_doomlab.png",
                 "projectName": "DOOMLAB",
                 "projectRelease": "2023",
                 "projectGame": "BONELAB",
-                "projectVideo": "https://notenoughphotons.dev/webm/project_doomlab.webm"    
+                "projectVideo": "webm/project_doomlab.webm"    
             }
         },
         {
             "Hitmarkers" :
             {
                 "projectRedirect": "mod_hitmarkers",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_hitmarkers.png",
+                "projectBanner": "img/titlecards/titlecard_hitmarkers.png",
                 "projectName": "Hitmarkers",
                 "projectRelease": "2021, 2022, 2023",
                 "projectGame": "BONELAB, BONEWORKS",
-                "projectVideo": "https://notenoughphotons.dev/webm/project_hitmarkers.webm"    
+                "projectVideo": "webm/project_hitmarkers.webm"    
             }
         },
         {
             "Paranoia" :
             {
                 "projectRedirect": "mod_paranoia",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_paranoia.jpg",
+                "projectBanner": "img/titlecards/titlecard_paranoia.jpg",
                 "projectName": "Paranoia",
                 "projectRelease": "2021",
                 "projectGame": "BONEWORKS",
-                "projectVideo": "https://notenoughphotons.dev/webm/project_paranoia.webm"    
+                "projectVideo": "webm/project_paranoia.webm"    
             }
         },
         {
             "Scoreworks" :
             {
                 "projectRedirect": "mod_scoreworks",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_scoreworks.jpg",
+                "projectBanner": "img/titlecards/titlecard_scoreworks.jpg",
                 "projectName": "Scoreworks",
                 "projectRelease": "2021, 2022",
                 "projectGame": "BONEWORKS",
-                "projectVideo": "https://notenoughphotons.dev/webm/project_scoreworks.webm"    
+                "projectVideo": "webm/project_scoreworks.webm"    
             }
         },
         {
             "Thrusters" :
             {
                 "projectRedirect": "mod_thrusters",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_thrusters.jpg",
+                "projectBanner": "img/titlecards/titlecard_thrusters.jpg",
                 "projectName": "Thrusters",
                 "projectRelease": "2021",
                 "projectGame": "BONEWORKS",
-                "projectVideo": "https://notenoughphotons.dev/webm/project_thrusters.webm"                    
+                "projectVideo": "webm/project_thrusters.webm"                    
             }
         }
     ],
@@ -104,27 +104,27 @@
             "Thrusters" :
             {
                 "projectRedirect": "game_doorsofgore",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_doorsofgore.png",
+                "projectBanner": "img/titlecards/titlecard_doorsofgore.png",
                 "projectName": "Doors Of Gore",
                 "projectRelease": "2024",
-                "projectVideo": "https://notenoughphotons.dev/webm/game_doorsofgore.webm"    
+                "projectVideo": "webm/game_doorsofgore.webm"    
             }
         },
         {
             "Smiler" :
             {
                 "projectRedirect": "game_smiler",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_smiler.png",
+                "projectBanner": "img/titlecards/titlecard_smiler.png",
                 "projectName": "Smiler",
                 "projectRelease": "2024 TBD",
-                "projectVideo": "https://notenoughphotons.dev/webm/game_smiler.webm"    
+                "projectVideo": "webm/game_smiler.webm"    
             }
         },
         {
             "Light Night" : 
             {
                 "projectRedirect": "game_lightnight",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_lightnight.png",
+                "projectBanner": "img/titlecards/titlecard_lightnight.png",
                 "projectName": "Light Night",
                 "projectRelease": "2024 TBD"    
             }
@@ -133,7 +133,7 @@
             "Hide And Seek" :
             {
                 "projectRedirect": "game_hideandseek",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_hideandseek.png",
+                "projectBanner": "img/titlecards/titlecard_hideandseek.png",
                 "projectName": "Hide And Seek",
                 "projectRelease": "TBD"    
             }
@@ -144,7 +144,7 @@
             "reCOM" :
             {
                 "projectRedirect": "project_recom",
-                "projectBanner": "https://notenoughphotons.dev/img/titlecards/titlecard_recom.png",
+                "projectBanner": "img/titlecards/titlecard_recom.png",
                 "projectName": "reCOM",
                 "projectRelease": "TBD"    
             }
